@@ -681,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209053887}
   - component: {fileID: 1209053889}
-  - component: {fileID: 1209053888}
+  - component: {fileID: 1209053890}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -706,22 +706,6 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1209053888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209053886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ceeff5b81905445b4e9181a340d8a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player_Controller
-  WalkSpeed: 5.5
-  RunSpeed: 9
-  LookSensitivity: 0.2
-  LookAngleLimit: 90
 --- !u!143 &1209053889
 CharacterController:
   m_ObjectHideFlags: 0
@@ -747,6 +731,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1209053890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209053886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ceeff5b81905445b4e9181a340d8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Controller
+  WalkSpeed: 5.5
+  RunSpeed: 9
+  gravity: 20
+  LookSensitivity: 0.2
+  LookAngleLimit: 90
 --- !u!1 &1453257943
 GameObject:
   m_ObjectHideFlags: 0
