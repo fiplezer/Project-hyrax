@@ -9,6 +9,7 @@ public class Player_Controller : MonoBehaviour
 {
     [SerializeField] private float WalkSpeed = 5.5f;
     [SerializeField] private float RunSpeed = 9f;
+    [SerializeField] private float gravity = 20f;
 
     [SerializeField] private float LookSensitivity = 0.2f;
     [SerializeField] private float LookAngleLimit = 90f;
@@ -42,7 +43,6 @@ public class Player_Controller : MonoBehaviour
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
         Vector2 mouseDelta = new Vector2(Mouse.current.delta.x.ReadValue(), Mouse.current.delta.y.ReadValue());
 
-
         HandleMovement(moveVector);
         HandleLooking(mouseDelta);
     }
@@ -58,6 +58,14 @@ public class Player_Controller : MonoBehaviour
 
         moveDirection = (forward * newSpeed.x) + (right * newSpeed.y);
         moveDirection.y = oldY;
+
+        if (!characterController.isGrounded)
+            moveDirection.y -= gravity * Time.deltaTime;
+        else if (characterController.isGrounded && moveDirection.y != 0)
+            moveDirection.y = 0f;
+
+            Debug.Log(oldY);
+        Debug.Log(moveDirection.y);
 
         characterController.Move(moveDirection * Time.deltaTime);
     }
