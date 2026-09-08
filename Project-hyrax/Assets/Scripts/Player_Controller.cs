@@ -64,9 +64,6 @@ public class Player_Controller : MonoBehaviour
         else if (characterController.isGrounded && moveDirection.y != 0)
             moveDirection.y = 0f;
 
-            Debug.Log(oldY);
-        Debug.Log(moveDirection.y);
-
         characterController.Move(moveDirection * Time.deltaTime);
     }
 
