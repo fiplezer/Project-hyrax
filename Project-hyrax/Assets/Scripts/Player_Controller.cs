@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class Player_Controller : MonoBehaviour
 {
+    [Header("movement settings")]
     [SerializeField] private float WalkSpeed = 5.5f;
     [SerializeField] private float RunSpeed = 9f;
     [SerializeField] private float gravity = 20f;
@@ -14,6 +15,7 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float LookSensitivity = 0.2f;
     [SerializeField] private float LookAngleLimit = 90f;
 
+    [Header("components")]
     private Camera mainCamera;
     private CharacterController characterController;
 
@@ -36,6 +38,7 @@ public class Player_Controller : MonoBehaviour
         Cursor.visible = false;
 
         currentMoveSpeed = WalkSpeed;
+
     }
 
     void Update()
