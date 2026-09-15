@@ -407,7 +407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3a0b46cd5ae8ff44bb9ab248ee3f39b, type: 2}
+  - {fileID: 2100000, guid: b5c155fa0bc8def4dbef1050fb39fde1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -497,7 +497,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef6b982ec49331f478a2e9719fe61b94, type: 2}
+  - {fileID: 2100000, guid: 8e934b71bda578644afeb4c43d39f8d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 247847156}
   - component: {fileID: 247847155}
   m_Layer: 0
-  m_Name: Hedin 1
+  m_Name: Statue3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e630babe4dfebf48bbb39f69018fa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Temp_Turning_script
+  value: 0
 --- !u!65 &247847156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -804,7 +805,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9f906957239a1f49ae1869cdd9c3c94, type: 2}
+  - {fileID: 2100000, guid: 5e22867863b73ec4e9db12bdc7e86030, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -894,7 +895,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9f906957239a1f49ae1869cdd9c3c94, type: 2}
+  - {fileID: 2100000, guid: 5e22867863b73ec4e9db12bdc7e86030, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -984,7 +985,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9f906957239a1f49ae1869cdd9c3c94, type: 2}
+  - {fileID: 2100000, guid: 5e22867863b73ec4e9db12bdc7e86030, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1074,7 +1075,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef6b982ec49331f478a2e9719fe61b94, type: 2}
+  - {fileID: 2100000, guid: 8e934b71bda578644afeb4c43d39f8d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1291,7 +1292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c43937dba078cf419aa70f18fd8547c, type: 2}
+  - {fileID: 2100000, guid: beac6ffffb48fb34cb48856f3fcab053, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1489,7 +1490,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c43937dba078cf419aa70f18fd8547c, type: 2}
+  - {fileID: 2100000, guid: beac6ffffb48fb34cb48856f3fcab053, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1760,7 +1761,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3a0b46cd5ae8ff44bb9ab248ee3f39b, type: 2}
+  - {fileID: 2100000, guid: b5c155fa0bc8def4dbef1050fb39fde1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1997,7 +1998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef6b982ec49331f478a2e9719fe61b94, type: 2}
+  - {fileID: 2100000, guid: 8e934b71bda578644afeb4c43d39f8d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2100,7 +2101,7 @@ GameObject:
   - component: {fileID: 1549416850}
   - component: {fileID: 1549416849}
   m_Layer: 0
-  m_Name: Hedin 1
+  m_Name: Statue2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2137,6 +2138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e630babe4dfebf48bbb39f69018fa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Temp_Turning_script
+  value: 0
 --- !u!65 &1549416850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2229,7 +2231,7 @@ GameObject:
   - component: {fileID: 1661422957}
   - component: {fileID: 1661422960}
   m_Layer: 0
-  m_Name: Hedin 1
+  m_Name: Statue1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2344,6 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e630babe4dfebf48bbb39f69018fa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Temp_Turning_script
+  value: 0
 --- !u!1 &1779112136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7015591079752236089, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
@@ -2420,7 +2423,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3a0b46cd5ae8ff44bb9ab248ee3f39b, type: 2}
+  - {fileID: 2100000, guid: b5c155fa0bc8def4dbef1050fb39fde1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2465,6 +2468,7 @@ GameObject:
   - component: {fileID: 1995777457}
   - component: {fileID: 1995777456}
   - component: {fileID: 1995777460}
+  - component: {fileID: 1995777461}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2577,9 +2581,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268294c2139ad194094f19092d576838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorOpen
-  Holder1: {fileID: 0}
-  Holder2: {fileID: 0}
-  Holder3: {fileID: 0}
+  Statue1: {fileID: 1661422955}
+  Statue2: {fileID: 1549416847}
+  Statue3: {fileID: 247847153}
+  DoorLockSound: {fileID: 8300000, guid: a4e87b84035dc6641a4840d2c10b504f, type: 3}
+--- !u!82 &1995777461
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995777455}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2022204243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,7 +2771,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4c43937dba078cf419aa70f18fd8547c, type: 2}
+  - {fileID: 2100000, guid: beac6ffffb48fb34cb48856f3fcab053, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
