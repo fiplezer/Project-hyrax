@@ -1,4 +1,5 @@
-using UnityEditor.ShaderGraph.Internal;
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,10 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float WalkSpeed = 5.5f;
     [SerializeField] private float RunSpeed = 9f;
     [SerializeField] private float gravity = 20f;
+
+    [SerializeField] private float stamina = 5f;
+    [SerializeField] private float maxStamina = 5f;
+    [SerializeField] private float chargeRate = 1f;
 
     [SerializeField] private float LookSensitivity = 0.2f;
     [SerializeField] private float LookAngleLimit = 90f;
@@ -23,6 +28,8 @@ public class Player_Controller : MonoBehaviour
     private float currentMoveSpeed = 0.0f;
     private Vector3 moveDirection = Vector3.zero;
     private float lookAngle = 0.0f;
+
+    private Coroutine recharge;
 
     void Start()
     {
@@ -42,6 +49,28 @@ public class Player_Controller : MonoBehaviour
     {
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
         Vector2 mouseDelta = new Vector2(Mouse.current.delta.x.ReadValue(), Mouse.current.delta.y.ReadValue());
+
+        if (runInput.IsPressed() && stamina > 0)
+        {
+            if (recharge != null)
+            {
+                StopCoroutine(recharge);
+            }
+            currentMoveSpeed = RunSpeed;
+            stamina -= Time.deltaTime;
+        }
+        else if (stamina < 0)
+        {
+            stamina = 0;
+            currentMoveSpeed = WalkSpeed;
+            if (recharge != null)
+            {
+                StopCoroutine(recharge);
+            }
+            recharge = StartCoroutine(RechargeStamina());
+        }
+
+
 
         HandleMovement(moveVector);
         HandleLooking(mouseDelta);
@@ -74,5 +103,19 @@ public class Player_Controller : MonoBehaviour
 
         mainCamera.transform.localRotation = Quaternion.Euler(lookAngle, 0, 0);
         transform.rotation *= Quaternion.Euler(0, mouseDelta.x * LookSensitivity, 0);
+    }
+
+    private IEnumerator RechargeStamina()
+    {
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log("test");
+
+        while (stamina < maxStamina)
+        {
+            stamina += chargeRate / 10f; 
+            if (stamina > maxStamina) stamina = maxStamina;
+            yield return new WaitForSeconds(.1f);
+        }
     }
 }
