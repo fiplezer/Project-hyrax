@@ -818,6 +818,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354552425}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &548843952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548843953}
+  m_Layer: 0
+  m_Name: Flashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &548843953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548843952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.57598, y: 2.33214, z: -24.42393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1382058626}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587426454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,6 +1615,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5103505013892982605, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7015591079752236089, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
       propertyPath: m_Name
       value: Player + Footsteps
@@ -1609,9 +1645,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7802929541551259544, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1282042523}
-    - targetCorrespondingSourceObject: {fileID: 7802929541551259544, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1382058626}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7015591079752236089, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
       insertIndex: -1
@@ -2048,6 +2081,7 @@ GameObject:
   - component: {fileID: 1382058626}
   - component: {fileID: 1382058628}
   - component: {fileID: 1382058627}
+  - component: {fileID: 1382058629}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -2063,12 +2097,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382058625}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.108, z: -0.003}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.1459804, y: -0.6881381, z: 2.6469288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1009568325}
+  m_Father: {fileID: 548843953}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1382058627
 MonoBehaviour:
@@ -2164,6 +2198,20 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1382058629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382058625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e604356c4a4b5b4ea2a5d994982dea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DelayedFlashlight
+  goFollow: {fileID: 1009568326}
+  speed: 3
 --- !u!1 &1418023543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,3 +2857,4 @@ SceneRoots:
   - {fileID: 8481509681137148718}
   - {fileID: 235053082}
   - {fileID: 891123975}
+  - {fileID: 548843953}
