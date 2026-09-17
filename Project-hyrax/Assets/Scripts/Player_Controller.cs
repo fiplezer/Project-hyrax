@@ -30,6 +30,7 @@ public class Player_Controller : MonoBehaviour
     private float lookAngle = 0.0f;
 
     private Coroutine recharge;
+    private bool recharging = false;
 
     void Start()
     {
@@ -48,30 +49,20 @@ public class Player_Controller : MonoBehaviour
     void Update()
     {
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
+
+        float sprintCheck;
+        if (moveVector.x != 0 || moveVector.y != 0)
+        {
+            sprintCheck = runInput.ReadValue<float>();
+        }
+        else
+        {
+            sprintCheck = 0;
+        }
+
         Vector2 mouseDelta = new Vector2(Mouse.current.delta.x.ReadValue(), Mouse.current.delta.y.ReadValue());
 
-        if (runInput.IsPressed() && stamina > 0)
-        {
-            if (recharge != null)
-            {
-                StopCoroutine(recharge);
-            }
-            currentMoveSpeed = RunSpeed;
-            stamina -= Time.deltaTime;
-        }
-        else if (stamina < 0)
-        {
-            stamina = 0;
-            currentMoveSpeed = WalkSpeed;
-            if (recharge != null)
-            {
-                StopCoroutine(recharge);
-            }
-            recharge = StartCoroutine(RechargeStamina());
-        }
-
-
-
+        Sprint(sprintCheck, moveVector);
         HandleMovement(moveVector);
         HandleLooking(mouseDelta);
     }
@@ -105,17 +96,55 @@ public class Player_Controller : MonoBehaviour
         transform.rotation *= Quaternion.Euler(0, mouseDelta.x * LookSensitivity, 0);
     }
 
+
+    private void Sprint(float sprintCheck, Vector2 moveVector)
+    {
+        if (sprintCheck == 1 && stamina > 0)
+        {
+            if (recharge != null)
+            {
+                StopCoroutine(recharge);
+                recharge = null;
+            }
+
+            recharging = false;
+            currentMoveSpeed = RunSpeed;
+            stamina -= Time.deltaTime;
+        }
+        
+        if (sprintCheck == 0 || stamina < 0)
+        {
+            currentMoveSpeed = WalkSpeed;
+
+            if (!recharging)
+            {
+                recharging = true;
+                recharge = StartCoroutine(RechargeStamina());
+            }
+        }
+    }
+
     private IEnumerator RechargeStamina()
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("test");
-
         while (stamina < maxStamina)
         {
-            stamina += chargeRate / 10f; 
-            if (stamina > maxStamina) stamina = maxStamina;
-            yield return new WaitForSeconds(.1f);
+            stamina += chargeRate * Time.deltaTime;
+
+            if (stamina >= maxStamina)
+            {
+                stamina = maxStamina;
+                recharging = false;
+                recharge = null;
+                yield break;
+            }
+
+            yield return null;
         }
+
+        recharging = false;
+        recharge = null;
     }
+
 }
