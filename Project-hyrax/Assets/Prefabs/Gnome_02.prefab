@@ -165,7 +165,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   range: 30
-  GnomeSound: {fileID: 302222454216116170}
+  GnomeSounds:
+  - {fileID: 8300000, guid: 97773b6eb3924ed4ebb952b5442f1a86, type: 3}
+  - {fileID: 8300000, guid: d68e5cf19e60a52409fc033b46135f9e, type: 3}
+  - {fileID: 8300000, guid: be823392849f2bb489da5a1529c471bc, type: 3}
+  - {fileID: 8300000, guid: ee222fe5508243f4d9dbc7ca9b54b367, type: 3}
+  - {fileID: 8300000, guid: 961fdc56f376e864595aa83aca9bffdb, type: 3}
+  - {fileID: 8300000, guid: 045bd375ca030b145b5ee9c6ffa413b1, type: 3}
+  - {fileID: 8300000, guid: e91931fa6061df844af80da3be39ff6a, type: 3}
+  - {fileID: 8300000, guid: 4e3a738b612848a4c9a5ea4705e51f91, type: 3}
+  - {fileID: 8300000, guid: 5757589844124e04a952df131caed651, type: 3}
+  AudioSource: {fileID: 302222454216116170}
 --- !u!82 &302222454216116170
 AudioSource:
   m_ObjectHideFlags: 0
@@ -180,7 +190,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 5d85260887dc22c47b664fbd00ae5ee2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0

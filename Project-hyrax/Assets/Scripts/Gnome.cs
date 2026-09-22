@@ -13,7 +13,8 @@ public class Gnome : MonoBehaviour
     public float range = 10.0f;
     private bool moving = false;
 
-    public AudioSource GnomeSound;
+    public AudioClip[] GnomeSounds;
+    public AudioSource AudioSource;
 
 
     void Start()
@@ -84,7 +85,8 @@ public class Gnome : MonoBehaviour
         Vector3 point;
         if (RandomPoint(transform.position, range, out point))
         {
-            GnomeSound.Play();
+            int index = Random.Range(0, GnomeSounds.Length);
+            AudioSource.PlayOneShot(GnomeSounds[index]);
             agent.destination = point;
             yield return new WaitForSeconds(5f);
         }
