@@ -59,6 +59,6 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - _Direction: {r: 0.01, g: 0.01, b: 0, a: 0}
-    - _tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _tiling: {r: 3, g: 3, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
