@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0
-  m_AmbientMode: 0
+  m_AmbientIntensity: 2.78
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 61162b51b6985a047bf64761bd8f2587, type: 2}
   m_HaloStrength: 0.5
@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 6874439349985895574, guid: 1ec717826aff1cf4793166589e400e36, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: b5c155fa0bc8def4dbef1050fb39fde1, type: 2}
     - target: {fileID: 8061528579042592076, guid: 1ec717826aff1cf4793166589e400e36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 117.02981
@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 1328532598}
+    - target: {fileID: 3034269764135907159, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+      propertyPath: WaterObject
+      value: 
+      objectReference: {fileID: 1076885979}
     - target: {fileID: 4148413449346994417, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 111.34
@@ -317,6 +321,10 @@ PrefabInstance:
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 1328532598}
+    - target: {fileID: 4619673948127810529, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+      propertyPath: WaterObject
+      value: 
+      objectReference: {fileID: 1076885979}
     - target: {fileID: 9024694040789217278, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
       propertyPath: m_Name
       value: PostFX change 1
@@ -354,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &938287248
 Transform:
   m_ObjectHideFlags: 0
@@ -416,7 +424,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: daf55c765d391c942b306a6a1483d9e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459,7 +467,7 @@ GameObject:
   - component: {fileID: 1076885980}
   - component: {fileID: 1076885983}
   - component: {fileID: 1076885982}
-  - component: {fileID: 1076885981}
+  - component: {fileID: 1076885984}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -476,34 +484,12 @@ Transform:
   m_GameObject: {fileID: 1076885979}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39716882, y: -1.49, z: -0.93639946}
+  m_LocalPosition: {x: -0.39716882, y: -1.4, z: -0.93639946}
   m_LocalScale: {x: 3.9301393, y: 4.407632, z: 4.716167}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2007653838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1076885981
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076885979}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1076885982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +515,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0ee8bcbb90899e840bc5a687e6a30339, type: 2}
+  - {fileID: 2100000, guid: fb659c98d6ac4db41b88596ff2c4e2e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -561,6 +547,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076885979}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1076885984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076885979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec47ade4b0d3a624781709dae0fd6867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterRise
+  targetHeight: 5
+  riseSpeed: 1
 --- !u!1 &1226807457
 GameObject:
   m_ObjectHideFlags: 0
