@@ -4,17 +4,41 @@ using UnityEngine.AI;
 public class LijnPuzzel : MonoBehaviour
 {
     private LineRenderer line;
-    public Transform target;
+    private Transform target;
     private NavMeshAgent agent;
     private NavMeshPath paths;
+    public GameObject[] targets;
 
-    void Start()
+    void OnEnable()
     {
+        if (line  == null)
+        {
+            line = GetComponent<LineRenderer>();
+        }
+        if (agent == null)
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
+        //get targets
+        if (targets.Length == 0)
+        {
+            targets = GameObject.FindGameObjectsWithTag("Finish");
+        }
+
+        //search for new goal/target
+        int index = Random.Range(0, targets.Length);
+        Debug.Log(targets[index]);
+        target = targets[index].GetComponent<Transform>();
+
         //create line stuff
-        line = GetComponent<LineRenderer>();
-        agent = GetComponent<NavMeshAgent>();
+        line.enabled = true;
         paths = new NavMeshPath();
         getPath();
+    }
+
+    private void OnDisable()
+    {
+        line.enabled = false;
     }
 
     private void getPath()
