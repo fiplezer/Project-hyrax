@@ -376,8 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23ae71989cd5dc4c9e8a85c5fd43f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
-  InteractorSource: {fileID: 1610447833}
   InteractRange: 2
+  CooldownTime: 0.5
 --- !u!1001 &1128894111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,11 +438,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 714021475}
   m_SourcePrefab: {fileID: 100100000, guid: 753d79f9e707038408dff2109463716b, type: 3}
---- !u!4 &1610447833 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2227096753207929700, guid: 753d79f9e707038408dff2109463716b, type: 3}
-  m_PrefabInstance: {fileID: 1128894111}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2022045186
 GameObject:
   m_ObjectHideFlags: 0
