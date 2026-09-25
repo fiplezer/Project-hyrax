@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6718016223933e1478211405f65e0dbf, type: 3}
-  m_Name: Blue
+  m_Name: White
   m_EditorClassIdentifier: Assembly-CSharp::ColorScriptableObject
-  color: {r: 0, g: 0, b: 1, a: 0}
-  ID: 2
+  color: {r: 1, g: 1, b: 1, a: 0}
+  ID: 6

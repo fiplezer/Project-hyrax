@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class Generate_Color : MonoBehaviour
+public class Generate_Color : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public ColorScriptableObject[] colors;
+    private ColorScriptableObject randomScriptableObject;
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        //get a random color and id from scriptable objects
+        int randomNumber = Random.Range(0, colors.Length);
+        randomScriptableObject = colors[randomNumber];
+        GetComponent<Renderer>().material.SetColor("_BaseColor", randomScriptableObject.color);
+        Debug.Log(randomScriptableObject.color);
+        Debug.Log(randomScriptableObject.ID);
     }
 }
