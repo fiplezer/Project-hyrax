@@ -9,6 +9,7 @@ public class SetDark : MonoBehaviour
     private Collider MoodCollider;
     private Collider DarkCollider;
     public GameObject WaterObject;
+    public GameObject Moon;
 
     [Header("Audio")]
     public AudioClip FlashlightClick;
@@ -28,5 +29,6 @@ public class SetDark : MonoBehaviour
         DarkCollider.enabled = false;
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Deactivate();
+        Moon.gameObject.SetActive(false);
     }
 }

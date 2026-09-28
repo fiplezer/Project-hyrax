@@ -2,41 +2,23 @@ using UnityEngine;
 
 public class WaterRise : MonoBehaviour
 {
-    public float targetHeight = 5f;
-    public float riseSpeed = 1f;
-
-    private bool rising = false;
+    public float speed = 0.1f;
+    public bool Rise = false;
 
     public void Activate()
     {
-        rising = true;
-    }
-
-    public void Deactivate()
-    {
-        rising = false;
+        Rise = true;
     }
 
     void Update()
     {
-        if (rising == true)
+        if (Rise == true)
         {
-            Vector3 targetPosition = new Vector3(
-                transform.position.x,
-                targetHeight,
-                transform.position.z
-            );
-
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                targetPosition,
-                riseSpeed * Time.deltaTime
-            );
-    
-            if (Mathf.Approximately(transform.position.y, targetHeight))
-            {
-                rising = false;
-            }
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
+    }
+    public void Deactivate()
+    {
+        Rise = false;
     }
 }
