@@ -5,19 +5,19 @@ public class Select_Color : MonoBehaviour, IInteractable
     public ColorScriptableObject[] colors;
     private ColorScriptableObject scriptableObject;
     private int number = 0;
+    [SerializeField] private GameObject ColorSelectLight;
 
     public void Interact()
     {
-        if (number <= colors.Length)
-        {
-            number++;
-        }
-        else
+        if (number == colors.Length - 1)
         {
             number = 0;
         }
+        else
+        {
+            number++;
+        }
         scriptableObject = colors[number];
-        GetComponent<Renderer>().material.SetColor("_Base   Color", scriptableObject.color);
-        Debug.Log(number);
+        ColorSelectLight.GetComponent<Renderer>().material.color = scriptableObject.color;
     }
 }
