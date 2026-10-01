@@ -732,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Valve
   rotationSpeed: 50
+  WaterObject: {fileID: 1076885979}
 --- !u!1 &1076885979
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaterRise
   speed: 0.1
   Rise: 0
+  Lower: 0
 --- !u!1 &1226807457
 GameObject:
   m_ObjectHideFlags: 0
