@@ -8,6 +8,7 @@ public class Valve : MonoBehaviour, IInteractable
     private Quaternion targetRotation;
     private bool Turnable = true;
     public GameObject WaterObject;
+    public bool Turned = false;
 
     void Start()
     {
@@ -22,7 +23,10 @@ public class Valve : MonoBehaviour, IInteractable
             StartCoroutine(waitThreeSeconds());
             Turnable = false;
             WaterObject.GetComponent<WaterRise>().ActivateLower();
+            Turned = true;
         }
+
+        Debug.Log("valve hit");
 
     }
 

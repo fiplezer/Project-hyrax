@@ -10,12 +10,12 @@ public class DoorOpen : MonoBehaviour, IInteractable
     public GameObject Statue3;
     AudioSource audioSource;
 
-    [Header("Audio")]
-    public AudioClip DoorLockSound;
-
     int statue1Value;
     int statue2Value;
     int statue3Value;
+
+    [Header("Audio")]
+    public AudioClip DoorLockSound;
 
     private void Awake()
     {
