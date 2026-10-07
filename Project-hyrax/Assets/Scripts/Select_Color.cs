@@ -3,9 +3,16 @@ using UnityEngine;
 public class Select_Color : MonoBehaviour, IInteractable
 {
     public ColorScriptableObject[] colors;
-    private ColorScriptableObject scriptableObject;
+    public ColorScriptableObject scriptableObject;
+
+    private Renderer lightRenderer;
+
     private int number = 0;
-    [SerializeField] private GameObject ColorSelectLight;
+
+    void Start()
+    {
+        lightRenderer = transform.GetChild(0).gameObject.GetComponent<Renderer>();
+    }
 
     public void Interact()
     {
@@ -17,7 +24,14 @@ public class Select_Color : MonoBehaviour, IInteractable
         {
             number++;
         }
+
         scriptableObject = colors[number];
-        ColorSelectLight.GetComponent<Renderer>().material.color = scriptableObject.color;
+        lightRenderer.material.color = scriptableObject.color;
+    }
+
+    public void ResetColor()
+    {
+        lightRenderer.material.color = Color.gray;
+        scriptableObject = null;
     }
 }

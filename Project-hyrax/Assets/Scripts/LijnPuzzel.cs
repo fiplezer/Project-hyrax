@@ -3,42 +3,63 @@ using UnityEngine.AI;
 
 public class LijnPuzzel : MonoBehaviour
 {
-    private LineRenderer line;
-    private Transform target;
+    [HideInInspector] public LineRenderer line;
+    [HideInInspector] public Transform target;
+    private Transform previousTarget;
     private NavMeshAgent agent;
     private NavMeshPath paths;
-    public GameObject[] targets;
+    public GameObject[] targets; //required for Generate_Line
+    public Transform[] transformTargets;
 
-    void OnEnable()
+    void Start()
     {
-        if (line  == null)
+        if (line == null)
         {
-            line = GetComponent<LineRenderer>();
+            line = GetComponentInChildren<LineRenderer>();
         }
         if (agent == null)
         {
-            agent = GetComponent<NavMeshAgent>();
+            GetComponent<NavMeshAgent>().enabled = false;
         }
-        //get targets
+
+        CreateLine();
+    }
+
+    public void CreateLine()
+    {
         if (targets.Length == 0)
         {
             targets = GameObject.FindGameObjectsWithTag("Finish");
+            transformTargets = new Transform[targets.Length];
+            for (int i = 0; i < targets.Length; i++)
+            {
+                transformTargets[i] = targets[i].transform;
+            }
         }
 
-        //search for new goal/target
-        int index = Random.Range(0, targets.Length);
-        Debug.Log(targets[index]);
-        target = targets[index].GetComponent<Transform>();
+        if (previousTarget == null)
+        {
+            int index = Random.Range(0, targets.Length);
+            target = transformTargets[index];
+            previousTarget = target;
+        }
+        else
+        {
+            while (target == previousTarget)
+            {
+                int index = Random.Range(0, targets.Length);
+                target = transformTargets[index];
+            }
+            previousTarget = target;
+        }
 
-        //create line stuff
-        line.enabled = true;
+        if (line.enabled == false)
+        {
+            line.enabled = true;
+        }
+
         paths = new NavMeshPath();
         getPath();
-    }
-
-    private void OnDisable()
-    {
-        line.enabled = false;
     }
 
     private void getPath()
@@ -49,8 +70,7 @@ public class LijnPuzzel : MonoBehaviour
 
         DrawPath(paths);
 
-        agent.enabled = false;
-        transform.eulerAngles = new Vector3(90f,0f,0f);
+        line.gameObject.transform.eulerAngles = new Vector3(90f,0f,0f);
     }
 
     private void DrawPath(NavMeshPath path)

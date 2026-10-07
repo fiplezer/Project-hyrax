@@ -2,21 +2,22 @@ using UnityEngine;
 
 public class Generate_Line : MonoBehaviour, IInteractable
 {
-    public Transform lijnpuzzel;
     private LijnPuzzel LijnPuzzelScript;
     public void Interact()
     {
-        //turn on/off lijnpuzzel script
-        //get lijnpuzzel script
-        LijnPuzzelScript = lijnpuzzel.GetComponent<LijnPuzzel>();
+        ResetLine();
+    }
 
-        if (LijnPuzzelScript.enabled == true)
+    public void ResetLine()
+    {
+        LijnPuzzelScript = transform.parent.GetComponentInParent<LijnPuzzel>();
+        transform.parent.GetComponentInChildren<Select_Color>().ResetColor();
+
+        foreach (GameObject target in  LijnPuzzelScript.targets)
         {
-            LijnPuzzelScript.enabled = false;
+            target.GetComponent<Generate_Color>().ResetColor();
         }
-        else
-        {
-            LijnPuzzelScript.enabled = true;
-        }
+
+        LijnPuzzelScript.CreateLine();
     }
 }
