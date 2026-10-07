@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6939403510369452905}
   - component: {fileID: 8953978648021748405}
   - component: {fileID: 7796100710125876846}
-  m_Layer: 3
+  - component: {fileID: 5988918311530232473}
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75,8 +76,26 @@ MonoBehaviour:
   WalkSpeed: 5.5
   RunSpeed: 9
   gravity: 20
+  stamina: 5
+  maxStamina: 5
+  chargeRate: 1
   LookSensitivity: 0.2
   LookAngleLimit: 90
+  StaminaBar: {fileID: 0}
+--- !u!114 &5988918311530232473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262170152853717692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23ae71989cd5dc4c9e8a85c5fd43f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactor
+  InteractRange: 2
+  CooldownTime: 0.5
 --- !u!1 &970191744853066686
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +108,7 @@ GameObject:
   - component: {fileID: 4372255370098154752}
   - component: {fileID: 6245433998454113755}
   - component: {fileID: 1477909778161802769}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -225,7 +244,7 @@ GameObject:
   - component: {fileID: 2194013096801303727}
   - component: {fileID: 3746396648060920121}
   - component: {fileID: 8647382871157843788}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

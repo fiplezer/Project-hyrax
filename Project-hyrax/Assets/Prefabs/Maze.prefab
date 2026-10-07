@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 269875901391666652}
   - component: {fileID: 2264770940734827824}
   - component: {fileID: 3008069566744709667}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 2318826874066875830}
   - component: {fileID: 8484701983759038874}
   - component: {fileID: 5114817674437569023}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 8589519867181045282}
   - component: {fileID: 8205904372327045523}
   - component: {fileID: 1357062958792185964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 71739295231880571}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8061528579042592076}
-  m_Layer: 0
+  - component: {fileID: 8231533908336126362}
+  m_Layer: 3
   m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,6 +390,38 @@ Transform:
   - {fileID: 5773125682352081980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8231533908336126362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256937427504231773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 5e820d03df63f9542a57ef83b33de9fb, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &3432422183622977486
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +433,7 @@ GameObject:
   - component: {fileID: 5794602861809904820}
   - component: {fileID: 3779919024232928196}
   - component: {fileID: 6579678769540751531}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +524,7 @@ GameObject:
   - component: {fileID: 4580006552057732976}
   - component: {fileID: 6267134091647600015}
   - component: {fileID: 2932865118234889328}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +636,7 @@ GameObject:
   - component: {fileID: 620748700639614485}
   - component: {fileID: 6090849744288264415}
   - component: {fileID: 4528075331676689716}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +748,7 @@ GameObject:
   - component: {fileID: 4599494394269514397}
   - component: {fileID: 8866770360266922295}
   - component: {fileID: 476360687165906073}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +860,7 @@ GameObject:
   - component: {fileID: 4353267135098997780}
   - component: {fileID: 895452336445434455}
   - component: {fileID: 2940378387530526321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ExtraPaths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +971,7 @@ GameObject:
   - component: {fileID: 8108733918222334358}
   - component: {fileID: 1060686097016425376}
   - component: {fileID: 2229502508533400569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1028,7 +1061,7 @@ GameObject:
   - component: {fileID: 895236413292968121}
   - component: {fileID: 8873136546717428988}
   - component: {fileID: 1009402639610423443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1151,7 @@ GameObject:
   - component: {fileID: 3463321295838461007}
   - component: {fileID: 994098580837262370}
   - component: {fileID: 6855951346462157187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1242,7 @@ GameObject:
   - component: {fileID: 7153509688210897171}
   - component: {fileID: 4402144996034958761}
   - component: {fileID: 3676030047920958984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ExtraPaths (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1354,7 @@ GameObject:
   - component: {fileID: 6473367607220250322}
   - component: {fileID: 6948168512601695080}
   - component: {fileID: 7547483850514064353}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1430,7 +1463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7834658562522811817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Maze-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1523,6 +1556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c0e9b1e0afcc5854b9b5555fc84f42d3, type: 3}
       propertyPath: m_Name
       value: Maze-1 But better 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e9b1e0afcc5854b9b5555fc84f42d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1635,11 +1672,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maze-3 But Better
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4889499260968084365}
   m_SourcePrefab: {fileID: 100100000, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
+--- !u!1 &4928651420880586051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
+  m_PrefabInstance: {fileID: 5235293328148461586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4889499260968084365
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928651420880586051}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -820648088020848222, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
 --- !u!4 &5705435063651377145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
