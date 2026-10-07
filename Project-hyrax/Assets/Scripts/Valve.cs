@@ -25,9 +25,6 @@ public class Valve : MonoBehaviour, IInteractable
             WaterObject.GetComponent<WaterRise>().ActivateLower();
             Turned = true;
         }
-
-        Debug.Log("valve hit");
-
     }
 
     public void Update()

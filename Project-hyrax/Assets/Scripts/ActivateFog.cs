@@ -6,12 +6,19 @@ public class ActivateFog : MonoBehaviour
     public float targetFogDensity = 1f;
 
     private bool increasingFog = false;
+    private bool decreasingFog = false;
 
     private void OnTriggerEnter(Collider other)
     {
         RenderSettings.fog = true;
-        RenderSettings.fogDensity = 0f;
         increasingFog = true;
+        decreasingFog = false;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        decreasingFog = true;
+        increasingFog = false;
     }
 
     private void Update()
@@ -27,6 +34,22 @@ public class ActivateFog : MonoBehaviour
             if (RenderSettings.fogDensity >= targetFogDensity)
             {
                 increasingFog = false;
+            }
+        }
+
+        if (decreasingFog == true)
+        {
+            RenderSettings.fogDensity = Mathf.MoveTowards(
+                RenderSettings.fogDensity,
+                0f,
+                fogIncreaseSpeed * Time.deltaTime
+            );
+
+            if (RenderSettings.fogDensity <= 0f)
+            {
+                RenderSettings.fogDensity = 0f;
+                decreasingFog = false;
+                RenderSettings.fog = false;
             }
         }
     }
