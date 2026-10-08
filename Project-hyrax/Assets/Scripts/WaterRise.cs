@@ -22,7 +22,7 @@ public class WaterRise : MonoBehaviour
         if (Lower == true)
         {
             transform.position -= Vector3.up * speed * Time.deltaTime;
-            StartCoroutine(waitThirtySeconds());
+            StartCoroutine(waitTwentyFiveSeconds());
         }
     }
     public void Deactivate()
@@ -36,9 +36,18 @@ public class WaterRise : MonoBehaviour
         Lower = true;
     }
 
-    IEnumerator waitThirtySeconds()
+    public void WaterDone()
     {
-        yield return new WaitForSeconds(30);
+        Rise = false;
+        Lower = false;
+        Vector3 pos = transform.position;
+        pos.y = Mathf.MoveTowards(pos.y, -1.4f, 2f * Time.deltaTime);
+        transform.position = pos;
+    }
+
+    IEnumerator waitTwentyFiveSeconds()
+    {
+        yield return new WaitForSeconds(25);
 
         Lower = false;
         Rise = true;

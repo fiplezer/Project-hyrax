@@ -29,7 +29,7 @@ public class PlankUp : MonoBehaviour
 
         if(Turned1 == true && Turned2 == true && Turned3 == true && Turned4 == true)
         {
-            WaterObject.GetComponent<WaterRise>().Deactivate();
+            WaterObject.GetComponent<WaterRise>().WaterDone();
             BridgeDown();
         }
     }
