@@ -11,7 +11,7 @@ public class LijnPuzzel : MonoBehaviour
     public GameObject[] targets; //required for Generate_Line
     public Transform[] transformTargets;
 
-    void Start()
+    void Awake()
     {
         if (line == null)
         {

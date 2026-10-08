@@ -18,7 +18,7 @@ public class Generate_Color : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!Interacted)
+        if (!Interacted && this.gameObject.transform == transform.parent.GetComponentInParent<LijnPuzzel>().target)
         {
             Interacted = true;
 

@@ -8,7 +8,18 @@ public class Check_Matching_Colors : MonoBehaviour, IInteractable
     private ColorScriptableObject targetScriptableObject;
     private ColorScriptableObject selectedScriptableObject;
 
-    private int points;
+    [SerializeField] private GameObject End;
+
+    public GameObject[] PointLights;
+    private int requiredPoints;
+    private int currentPoints;
+
+    private void Awake()
+    {
+        End = GameObject.FindGameObjectWithTag("End");
+        End.SetActive(false);
+        requiredPoints = PointLights.Length;
+    }
 
     public void Interact()
     {
@@ -27,9 +38,15 @@ public class Check_Matching_Colors : MonoBehaviour, IInteractable
 
         if (targetScriptableObject.ID == selectedScriptableObject.ID)
         {
-            points++;
-            if (points >= 2)
+            currentPoints++;
+            if (currentPoints <= requiredPoints)
             {
+                PointLights[currentPoints - 1].GetComponent<Renderer>().material.color = Color.green;
+            }
+
+            if (currentPoints >= requiredPoints)
+            {
+                End.SetActive(true);
                 Debug.Log("Win");
             }
             ResetAll();
