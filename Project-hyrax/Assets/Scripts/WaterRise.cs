@@ -6,6 +6,7 @@ public class WaterRise : MonoBehaviour
     public float speed = 0.1f;
     public bool Rise = false;
     public bool Lower = false;
+    private bool Once = true;
 
     public void Activate()
     {
@@ -19,10 +20,11 @@ public class WaterRise : MonoBehaviour
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
-        if (Lower == true)
+        if (Lower == true && Once == true)
         {
             transform.position -= Vector3.up * speed * Time.deltaTime;
             StartCoroutine(waitTwentyFiveSeconds());
+            Once = false;
         }
     }
     public void Deactivate()
