@@ -35,7 +35,6 @@ public class Valve : MonoBehaviour, IInteractable
     IEnumerator waitThreeSeconds()
     {
         yield return new WaitForSeconds(3);
-
         enabled = false;
     }
 }

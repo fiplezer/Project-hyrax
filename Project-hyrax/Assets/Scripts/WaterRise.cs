@@ -6,7 +6,7 @@ public class WaterRise : MonoBehaviour
     public float speed = 0.1f;
     public bool Rise = false;
     public bool Lower = false;
-    private bool Once = true;
+    public bool Once = true;
 
     public void Activate()
     {
@@ -40,17 +40,33 @@ public class WaterRise : MonoBehaviour
 
     public void WaterDone()
     {
-        Rise = false;
+        Once = false;
         Lower = false;
-        Vector3 pos = transform.position;
-        pos.y = Mathf.MoveTowards(pos.y, -1.4f, 2f * Time.deltaTime);
-        transform.position = pos;
+        Rise = false;
+
+        IEnumerator LowerPlane(float targetY, float duration)
+        {
+            Vector3 startPos = transform.position;
+            Vector3 targetPos = new Vector3(startPos.x, targetY, startPos.z);
+
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                transform.position = Vector3.Lerp(startPos, targetPos, elapsed / duration);
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            transform.position = targetPos;
+        }
     }
 
     IEnumerator waitTwentyFiveSeconds()
     {
         yield return new WaitForSeconds(25);
 
+        Once = true;
         Lower = false;
         Rise = true;
     }
