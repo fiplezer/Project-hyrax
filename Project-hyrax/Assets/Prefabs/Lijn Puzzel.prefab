@@ -461,7 +461,7 @@ Transform:
   - {fileID: 8230636605246283020}
   - {fileID: 7982482738127112012}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 0}
 --- !u!195 &390538270221301712
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2988851244278572703}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: 1479372276
   m_Radius: 1
   m_Speed: 0
   m_Acceleration: 0
