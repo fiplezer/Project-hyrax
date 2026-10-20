@@ -10,6 +10,8 @@ public class SetMood : MonoBehaviour
     private Collider DarkCollider;
     public GameObject WaterObject;
     public GameObject Moon;
+    public GameObject Backgroundmusic1;
+    public GameObject Backgroundmusic2;
 
     [Header("Audio")]
     public AudioClip FlashlightClick;
@@ -30,5 +32,7 @@ public class SetMood : MonoBehaviour
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Activate();
         Moon.gameObject.SetActive(true);
+        Backgroundmusic1.gameObject.SetActive(false);
+        Backgroundmusic2.gameObject.SetActive(true);
     }
 }
