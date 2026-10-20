@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
   m_SerializedVersion: 0
-  m_AgentTypeID: 1479372276
+  m_AgentTypeID: -1372625422
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.5
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: aaaca25cc353bb84ab7cf1c7d117239f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0b985b36ae4978643bbe835127a29651, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &3816736973997815449
 MonoBehaviour:
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 104530c5c1c63874ba6238cc97d9228a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ba1bcdd7c75dac14cbce9e7ff7cc62db, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &3432422183622977486
 GameObject:
@@ -1818,7 +1818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8bd9aa1958044994e8600fec5862e090, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
