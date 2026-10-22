@@ -12,6 +12,7 @@ public class SetDark : MonoBehaviour
     public GameObject Moon;
 
     [Header("Audio")]
+    [SerializeField] private MusicFade MusicFade;
     public AudioClip FlashlightClick;
 
     private void Awake()
@@ -30,5 +31,6 @@ public class SetDark : MonoBehaviour
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Moon.gameObject.SetActive(false);
+        MusicFade.ToggleMusic();
     }
 }

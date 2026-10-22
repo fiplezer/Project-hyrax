@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bushess
+  m_Name: Bushess1
   m_Shader: {fileID: -6465566751694194690, guid: 2002c2c526df4144eb3c96f9fe36e0fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0

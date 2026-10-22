@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &186757348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5671123513526570314, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &248408583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,6 +209,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   InteractRange: 2
+--- !u!1 &340531363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4957047785925536393, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &340531368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340531363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df88f26fa06eb4aa4998d003327352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetCorn
+  Mood: {fileID: 1238058598}
+  WaterObject: {fileID: 1138101090}
+  Moon: {fileID: 1358722179}
+  Backgroundmusic2: {fileID: 186757348}
+  Backgroundmusic3: {fileID: 667458034}
+  MusicFade: {fileID: 2070764304}
+--- !u!114 &375402394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2352899940733898047, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733889565e014084e926f2031a4f4c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicFade
 --- !u!1 &580583330 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4821122014155661990, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
@@ -213,6 +252,16 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7802929541551259544, guid: ecb8121438094a44f8ea6c2472012aeb, type: 3}
   m_PrefabInstance: {fileID: 248408583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &667458034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7113725462687411746, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1138101090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2045292912373159058, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226807457
 GameObject:
@@ -342,6 +391,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1238058598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5283177237877371239, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1328532598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5803661615035431619, guid: 59edfbfdbfc26c6499e9eafbd305b8be, type: 3}
@@ -474,6 +528,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 28.325, y: -158.586, z: -145.6}
+--- !u!1 &1477306028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8788605263698949640, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1717273237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -535,6 +594,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59edfbfdbfc26c6499e9eafbd305b8be, type: 3}
+--- !u!114 &2070764304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 674042425290116318, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 1945092013317620518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733889565e014084e926f2031a4f4c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicFade
 --- !u!1001 &1945092013317620518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,14 +613,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 403119568588913012, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Moon
+      value: 
+      objectReference: {fileID: 1358722179}
+    - target: {fileID: 403119568588913012, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Flashlight
+      value: 
+      objectReference: {fileID: 1328532598}
+    - target: {fileID: 403119568588913012, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic1
+      value: 
+      objectReference: {fileID: 1477306028}
+    - target: {fileID: 403119568588913012, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic2
+      value: 
+      objectReference: {fileID: 186757348}
+    - target: {fileID: 674042425290116318, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
       objectReference: {fileID: 1358722179}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: MusicFade
+      value: 
+      objectReference: {fileID: 375402394}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 1328532598}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic1
+      value: 
+      objectReference: {fileID: 1477306028}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic2
+      value: 
+      objectReference: {fileID: 186757348}
+    - target: {fileID: 2352899940733898047, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938673216329277031, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 75ca8204e2d9a884b8b82a44a0a5f4d7, type: 2}
     - target: {fileID: 5182588715064577298, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 117.02981
@@ -595,18 +705,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maze + water/valves
       objectReference: {fileID: 0}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Moon
+      value: 
+      objectReference: {fileID: 1358722179}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: MusicFade
+      value: 
+      objectReference: {fileID: 2070764304}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Flashlight
+      value: 
+      objectReference: {fileID: 1328532598}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic1
+      value: 
+      objectReference: {fileID: 1477306028}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic2
+      value: 
+      objectReference: {fileID: 186757348}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
       objectReference: {fileID: 1358722179}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: MusicFade
+      value: 
+      objectReference: {fileID: 375402394}
+    - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 1328532598}
+    - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic1
+      value: 
+      objectReference: {fileID: 1477306028}
+    - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Backgroundmusic2
+      value: 
+      objectReference: {fileID: 186757348}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4957047785925536393, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 340531368}
   m_SourcePrefab: {fileID: 100100000, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
 --- !u!1001 &5183285689659521076
 PrefabInstance:
