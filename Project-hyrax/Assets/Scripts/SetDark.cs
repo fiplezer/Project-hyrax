@@ -10,6 +10,8 @@ public class SetDark : MonoBehaviour
     private Collider DarkCollider;
     public GameObject WaterObject;
     public GameObject Moon;
+    public ParticleSystem Fireflies;
+    public ParticleSystem Leaves;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -32,5 +34,7 @@ public class SetDark : MonoBehaviour
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Moon.gameObject.SetActive(false);
         MusicFade.ToggleMusic();
+        Fireflies.gameObject.SetActive(false);
+        Leaves.gameObject.SetActive(true);
     }
 }
