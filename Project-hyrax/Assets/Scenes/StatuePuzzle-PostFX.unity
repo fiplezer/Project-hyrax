@@ -629,6 +629,10 @@ PrefabInstance:
       propertyPath: Backgroundmusic2
       value: 
       objectReference: {fileID: 186757348}
+    - target: {fileID: 674042425290116318, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
@@ -649,6 +653,10 @@ PrefabInstance:
       propertyPath: Backgroundmusic2
       value: 
       objectReference: {fileID: 186757348}
+    - target: {fileID: 2352899940733898047, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: FadeDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3938673216329277031, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
