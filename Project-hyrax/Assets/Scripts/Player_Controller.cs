@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -34,6 +35,8 @@ public class Player_Controller : MonoBehaviour
     private Coroutine recharge;
     private bool recharging = false;
 
+    public Slider StaminaBar;
+
     void Start()
     {
         mainCamera = GetComponentInChildren<Camera>();
@@ -51,6 +54,7 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
+        StaminaBar.value = stamina;
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
 
         float sprintCheck;
