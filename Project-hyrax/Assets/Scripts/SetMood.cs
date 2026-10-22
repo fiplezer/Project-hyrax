@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SetMood : MonoBehaviour
 {
@@ -10,10 +11,9 @@ public class SetMood : MonoBehaviour
     private Collider DarkCollider;
     public GameObject WaterObject;
     public GameObject Moon;
-    public GameObject Backgroundmusic1;
-    public GameObject Backgroundmusic2;
 
     [Header("Audio")]
+    [SerializeField] private MusicFade MusicFade;
     public AudioClip FlashlightClick;
 
     private void Awake()
@@ -32,7 +32,6 @@ public class SetMood : MonoBehaviour
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Activate();
         Moon.gameObject.SetActive(true);
-        Backgroundmusic1.gameObject.SetActive(false);
-        Backgroundmusic2.gameObject.SetActive(true);
+        MusicFade.ToggleMusic();
     }
 }

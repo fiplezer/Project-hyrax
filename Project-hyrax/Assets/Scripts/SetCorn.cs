@@ -10,6 +10,9 @@ public class SetCorn : MonoBehaviour
     public GameObject Moon;
     public GameObject Backgroundmusic2;
     public GameObject Backgroundmusic3;
+
+    [Header("Audio")]
+    [SerializeField] private MusicFade MusicFade;
     private void Awake()
     {
         MoodCollider = Mood.GetComponent<Collider>();
@@ -23,5 +26,6 @@ public class SetCorn : MonoBehaviour
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Backgroundmusic2.gameObject.SetActive(true);
         Backgroundmusic3.gameObject.SetActive(false);
+        MusicFade.ToggleMusic();
     }
 }
