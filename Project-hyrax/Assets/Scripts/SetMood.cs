@@ -27,15 +27,15 @@ public class SetMood : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Fireflies.Play();
+        Leaves.Stop();
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
-        DarkCollider.enabled = true;
-        MoodCollider.enabled = false;
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Activate();
         Moon.gameObject.SetActive(true);
         MusicFade.ToggleMusic();
-        Fireflies.gameObject.SetActive(true);
-        Leaves.gameObject.SetActive(false);
+        DarkCollider.enabled = true;
+        MoodCollider.enabled = false;
     }
 }

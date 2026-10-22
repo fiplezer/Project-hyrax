@@ -10,6 +10,8 @@ public class SetCorn : MonoBehaviour
     public GameObject Moon;
     public GameObject Backgroundmusic2;
     public GameObject Backgroundmusic3;
+    public ParticleSystem Fireflies;
+    public ParticleSystem Leaves;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -21,11 +23,13 @@ public class SetCorn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        MoodCollider.enabled = true;
-        CornCollider.enabled = false;
+        Fireflies.Play();
+        Leaves.Stop();
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Backgroundmusic2.gameObject.SetActive(true);
         Backgroundmusic3.gameObject.SetActive(false);
         MusicFade.ToggleMusic();
+        MoodCollider.enabled = true;
+        CornCollider.enabled = false;
     }
 }
