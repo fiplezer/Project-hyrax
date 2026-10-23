@@ -64,9 +64,13 @@ public class LijnPuzzel : MonoBehaviour
 
     private void getPath()
     {
-        line.SetPosition(0, transform.position); 
+        line.SetPosition(0, transform.position);
 
-        NavMesh.CalculatePath(transform.position, target.position, NavMesh.AllAreas, paths);
+        Vector3 selfPos = new Vector3(transform.position.x, 0.1f, transform.position.z);
+        Vector3 targetPos = new Vector3(target.position.x, 0.1f, target.position.z);
+
+
+        NavMesh.CalculatePath(selfPos, targetPos, NavMesh.AllAreas, paths);
 
         DrawPath(paths);
 
