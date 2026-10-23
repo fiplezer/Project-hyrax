@@ -979,6 +979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564194090890331532, guid: 1ec717826aff1cf4793166589e400e36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 943b604165fe14b49850df4ba96bf7c8, type: 2}
     - target: {fileID: 3256937427504231773, guid: 1ec717826aff1cf4793166589e400e36, type: 3}
       propertyPath: m_Name
       value: Maze

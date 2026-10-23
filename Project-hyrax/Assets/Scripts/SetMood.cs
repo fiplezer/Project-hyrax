@@ -18,6 +18,9 @@ public class SetMood : MonoBehaviour
     [SerializeField] private MusicFade MusicFade;
     public AudioClip FlashlightClick;
 
+    [Header("TextAnimation")]
+    [SerializeField] private UITextChanges UiTextChanges;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -29,6 +32,7 @@ public class SetMood : MonoBehaviour
     {
         Fireflies.Play();
         Leaves.Stop();
+        //UiTextChanges.EnterWaterText(); Ben ik nog mee bezig - Zoe
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
         audioSource.PlayOneShot(FlashlightClick);
