@@ -63,6 +63,6 @@ public class DoorController : MonoBehaviour
 
         targetTransform.rotation = targetRotation;
         isOpen = opening;
-        isRotating = false;
+        isRotating = false; 
     }
 }
