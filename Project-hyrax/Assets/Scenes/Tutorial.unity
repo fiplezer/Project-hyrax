@@ -271,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 111232704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.78291, y: 48.45763, z: -10.93}
+  m_LocalPosition: {x: 111.78291, y: 47.77, z: -10.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 300096876}
   - component: {fileID: 300096875}
   - component: {fileID: 300096874}
+  - component: {fileID: 300096877}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -460,6 +461,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300096872}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &300096877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300096872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa83b705a54b4e745b529db51fa1de11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorButton
+  Door1: {fileID: 1105352266}
+  Door2: {fileID: 1148381970}
 --- !u!198 &444090412 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8436439230295724821, guid: d950b38fbae5bda438be51f922369002, type: 3}
@@ -998,11 +1013,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   rotateSelf: 1
-  doorObject: {fileID: 0}
+  doorObject: {fileID: 1608339238}
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationAngle: -23
-  rotationSpeed: 1.5
-  soundClip: {fileID: 0}
+  rotationAngle: 90
+  rotationSpeed: 0.3
+  soundClipOpen: {fileID: 8300000, guid: 7dcd4d2ae19080349a25ddbc77cc9f06, type: 3}
+  soundClipClose: {fileID: 8300000, guid: 2c224776640f20c46993d09af6455a87, type: 3}
 --- !u!1 &1148381970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1046,7 @@ Transform:
   m_GameObject: {fileID: 1148381970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5373711, y: 2.2182877, z: -17.24178}
+  m_LocalPosition: {x: -0.279, y: 2.2182877, z: -16.93}
   m_LocalScale: {x: 6.0774717, y: 6.0774727, z: 6.0774717}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1044,7 +1060,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148381970}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1147,11 +1163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   rotateSelf: 1
-  doorObject: {fileID: 0}
+  doorObject: {fileID: 1923489624}
   rotationAxis: {x: 0, y: 1, z: 0}
-  rotationAngle: -150
-  rotationSpeed: 1.5
-  soundClip: {fileID: 0}
+  rotationAngle: -90
+  rotationSpeed: 0.3
+  soundClipOpen: {fileID: 0}
+  soundClipClose: {fileID: 0}
 --- !u!198 &1371715162 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 3642618904637383977, guid: d950b38fbae5bda438be51f922369002, type: 3}
@@ -1262,6 +1279,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 477654, guid: 3b11171e2a148a34a92bec2f1dd14b59, type: 3}
   m_PrefabInstance: {fileID: 1584809331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1608339238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100424, guid: 46df802769a54bf41b32236bce131838, type: 3}
+  m_PrefabInstance: {fileID: 288852614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1615548708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1338,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476300, guid: 04e14a6e2b4e7294e8a97dd78a2baf31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6007011
+      value: -1.601
       objectReference: {fileID: 0}
     - target: {fileID: 476300, guid: 04e14a6e2b4e7294e8a97dd78a2baf31, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1346,7 +1368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 476300, guid: 04e14a6e2b4e7294e8a97dd78a2baf31, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.05057565
+      value: -0.087
       objectReference: {fileID: 0}
     - target: {fileID: 476300, guid: 04e14a6e2b4e7294e8a97dd78a2baf31, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1447,6 +1469,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5803661615035431619, guid: 59edfbfdbfc26c6499e9eafbd305b8be, type: 3}
   m_PrefabInstance: {fileID: 1805826239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923489624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 185226, guid: 04e14a6e2b4e7294e8a97dd78a2baf31, type: 3}
+  m_PrefabInstance: {fileID: 1687091895}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1933088641
 GameObject:

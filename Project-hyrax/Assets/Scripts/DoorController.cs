@@ -11,7 +11,8 @@ public class DoorController : MonoBehaviour
     [SerializeField] private float rotationSpeed = 1.5f;
 
     [Header("Audio")]
-    [SerializeField] private AudioClip soundClip = null;
+    [SerializeField] private AudioClip soundClipOpen;
+    [SerializeField] private AudioClip soundClipClose;
 
     private Quaternion initialRotation;
     private Quaternion targetRotation;
@@ -45,9 +46,13 @@ public class DoorController : MonoBehaviour
 
         Quaternion startRotation = targetTransform.rotation;
 
-        if (soundClip != null)
+        if (opening)
         {
-            doorAudioSource.PlayOneShot(soundClip);
+            doorAudioSource.PlayOneShot(soundClipOpen);
+        }
+        if (!opening)
+        {
+            doorAudioSource.PlayOneShot(soundClipClose);
         }
 
         float duration = 1f / rotationSpeed;
@@ -63,6 +68,6 @@ public class DoorController : MonoBehaviour
 
         targetTransform.rotation = targetRotation;
         isOpen = opening;
-        isRotating = false; 
+        isRotating = false;
     }
 }
