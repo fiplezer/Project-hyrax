@@ -15,6 +15,7 @@ public class Gnome : MonoBehaviour
 
     public AudioClip[] GnomeSounds;
     public AudioSource AudioSource;
+    public GameObject Poof;
 
 
     void Start()
@@ -91,8 +92,18 @@ public class Gnome : MonoBehaviour
             yield return new WaitForSeconds(5f);
         }
 
-        Destroy(this.gameObject);
+        GetComponentInChildren<MeshRenderer>().enabled = false;
 
+        //instance poof
+        GameObject poof = Instantiate(Poof, transform.position, transform.rotation);
+        poof.GetComponent<ParticleSystem>().Play();
+        poof.GetComponent<AudioSource>().Play();
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(poof);
+
+        Destroy(this.gameObject);
     }
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
