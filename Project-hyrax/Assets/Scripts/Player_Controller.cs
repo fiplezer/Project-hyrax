@@ -36,6 +36,8 @@ public class Player_Controller : MonoBehaviour
     private bool recharging = false;
 
     public Slider StaminaBar;
+    public Vector2 moveVector;
+    public float sprintCheck;
 
     void Start()
     {
@@ -55,9 +57,8 @@ public class Player_Controller : MonoBehaviour
     void Update()
     {
         StaminaBar.value = stamina;
-        Vector2 moveVector = moveInput.ReadValue<Vector2>();
+        moveVector = moveInput.ReadValue<Vector2>();
 
-        float sprintCheck;
         if (moveVector.x != 0 || moveVector.y != 0)
         {
             sprintCheck = runInput.ReadValue<float>();

@@ -480,6 +480,56 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8436439230295724821, guid: d950b38fbae5bda438be51f922369002, type: 3}
   m_PrefabInstance: {fileID: 872131591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &456924928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456924930}
+  - component: {fileID: 456924929}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &456924929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456924928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1d68f42d60b2e4492e1c0a6bc8755b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialMovementReader
+  CharacterController: {fileID: 872131592}
+  ReadMoveDirection: {x: 0, y: 0}
+  Door1: {fileID: 1105352266}
+  Door2: {fileID: 1148381970}
+  IsSprinting: 0
+  Interacted: 0
+--- !u!4 &456924930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456924928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &550120483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -869,6 +919,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d950b38fbae5bda438be51f922369002, type: 3}
+--- !u!1 &872131592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4475170911575805946, guid: d950b38fbae5bda438be51f922369002, type: 3}
+  m_PrefabInstance: {fileID: 872131591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1105352266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,3 +1577,4 @@ SceneRoots:
   - {fileID: 97342948}
   - {fileID: 1933088642}
   - {fileID: 111232705}
+  - {fileID: 456924930}
