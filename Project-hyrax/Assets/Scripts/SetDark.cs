@@ -22,19 +22,20 @@ public class SetDark : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         MoodCollider = Mood.GetComponent<Collider>();
         DarkCollider = this.GetComponent<Collider>();
+        Fireflies.Stop();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Fireflies.Stop();
+        Leaves.Play();
         RenderSettings.ambientIntensity = 0.0f;
         Flashlight.SetActive(true);
-        MoodCollider.enabled = true;
-        DarkCollider.enabled = false;
         audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Moon.gameObject.SetActive(false);
         MusicFade.ToggleMusic();
-        Fireflies.gameObject.SetActive(false);
-        Leaves.gameObject.SetActive(true);
+        MoodCollider.enabled = true; //moet mogelijk onderaan is dingen niet switchen - Zoe
+        DarkCollider.enabled = false;
     }
 }

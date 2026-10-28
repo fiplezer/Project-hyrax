@@ -19,7 +19,7 @@ public class Valve : MonoBehaviour, IInteractable
     {
         if (Turnable == true)
         {
-            targetRotation *= Quaternion.Euler(0, 90, 0);
+            targetRotation *= Quaternion.Euler(0, 180, 0);
             StartCoroutine(waitThreeSeconds());
             Turnable = false;
             WaterObject.GetComponent<WaterRise>().ActivateLower();
