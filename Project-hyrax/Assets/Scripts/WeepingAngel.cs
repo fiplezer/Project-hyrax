@@ -38,14 +38,15 @@ public class WeepingAngel : MonoBehaviour
         Vector3 viewportPosition =
             playerCamera.WorldToViewportPoint(transform.position);
 
-        if (viewportPosition.z < 0)
+        if (viewportPosition.z <= 0)
             return true;
 
         bool insideCameraView =
             viewportPosition.x >= 0f &&
             viewportPosition.x <= 1f &&
             viewportPosition.y >= 0f &&
-            viewportPosition.y <= 1f;
+            viewportPosition.y <= 1f &&
+            viewportPosition.z > 0f;
 
         if (!insideCameraView)
             return true;

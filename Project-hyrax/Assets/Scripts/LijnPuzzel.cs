@@ -11,6 +11,8 @@ public class LijnPuzzel : MonoBehaviour
     public GameObject[] targets; //required for Generate_Line
     public Transform[] transformTargets;
 
+    public float textureScaleFactor = 1.0f;
+
     void Awake()
     {
         if (line == null)
@@ -83,6 +85,13 @@ public class LijnPuzzel : MonoBehaviour
             return;
 
         line.positionCount = path.corners.Length;
+
+
+        line.textureMode = LineTextureMode.Tile;
+        line.textureScale = new Vector2(1f, 1f);
+
+        // This is the core logic for unity how to use linerenderer without stretching material
+
 
         for (var i = 1; i < path.corners.Length; i++)
         {
