@@ -45,7 +45,8 @@ public class WeepingAngel : MonoBehaviour
             viewportPosition.x >= 0f &&
             viewportPosition.x <= 1f &&
             viewportPosition.y >= 0f &&
-            viewportPosition.y <= 1f;
+            viewportPosition.y <= 1f &&
+            viewportPosition.z > 0f;
 
         if (!insideCameraView)
             return true;
