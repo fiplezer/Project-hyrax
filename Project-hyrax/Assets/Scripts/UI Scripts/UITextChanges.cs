@@ -8,6 +8,6 @@ public class UITextChanges : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void WaterEnterText()
     {
-        EnterWaterText.enabled = true;
+        EnterWaterText.gameObject.SetActive(true);
     }
 }
