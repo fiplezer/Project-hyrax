@@ -33,6 +33,7 @@ public class Interactor : MonoBehaviour
     {
         if (interactInput.IsPressed() && !coolDown)
         {
+            Debug.DrawRay(InteractorSource.position, InteractorSource.forward, Color.blue, 200f);
             coolDown = true;
             Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
             if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
