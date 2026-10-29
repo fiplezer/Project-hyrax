@@ -4,11 +4,9 @@ using System.Collections;
 
 public class DoorButton : MonoBehaviour, IInteractable
 {
-    public GameObject Door1;
-    public GameObject Door2;
+    public GameObject gameManager;
     public void Interact()
     {
-        Door1.GetComponent<DoorController>().ToggleDoor();
-        Door2.GetComponent<DoorController>().ToggleDoor();
+        gameManager.GetComponent<TutorialMovementReader>().InteractWithButton();
     }
 }
