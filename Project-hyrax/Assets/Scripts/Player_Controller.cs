@@ -54,7 +54,7 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        StaminaBar.value = stamina;
+        StaminaBar.value = stamina; //change to only update when the stamine value gets changed
         Vector2 moveVector = moveInput.ReadValue<Vector2>();
 
         float sprintCheck;

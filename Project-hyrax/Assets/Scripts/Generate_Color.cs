@@ -10,10 +10,13 @@ public class Generate_Color : MonoBehaviour, IInteractable
 
     public bool Interacted = false;
 
+    private Color startColor;
+
     void Start()
     {
         line = transform.parent.GetComponentInParent<LijnPuzzel>().line;
-        rend = GetComponent<Renderer>();
+        rend = transform.GetChild(0).gameObject.GetComponent<Renderer>();
+        startColor = rend.material.color;
     }
 
     public void Interact()
@@ -33,7 +36,7 @@ public class Generate_Color : MonoBehaviour, IInteractable
     public void ResetColor()
     {
         Interacted = false;
-        rend.material.color = Color.gray;
+        rend.material.color = startColor;
         randomScriptableObject = null;
     }
 }
