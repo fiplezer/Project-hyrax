@@ -109,7 +109,7 @@ public class Gnome : MonoBehaviour
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range;
-        randomPoint = new Vector3(randomPoint.x, 0, randomPoint.z);
+        randomPoint = new Vector3(randomPoint.x, transform.position.y, randomPoint.z);
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 2.0f, NavMesh.AllAreas))
         {
