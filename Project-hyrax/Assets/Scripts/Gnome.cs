@@ -21,8 +21,7 @@ public class Gnome : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Player").transform;
-
+        player = GameObject.Find("Player Fused").transform;
         playerCamera = Camera.main;
     }
 
