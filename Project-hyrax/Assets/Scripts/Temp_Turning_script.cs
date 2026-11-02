@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class Temp_Turning_script : MonoBehaviour, IInteractable
 {
+    [Header("Settings")]
     public int value = 0;
     public float turnDuration = 0.5f;
     bool isTurning = false;
+
+    public GameObject SatuePole;
+
 
     public void Interact()
     {
