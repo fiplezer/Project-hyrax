@@ -1,21 +1,49 @@
-using System.Threading;
+using System.Collections;
 using UnityEngine;
 
 public class Temp_Turning_script : MonoBehaviour, IInteractable
 {
-    float timer = 0f;
+    [Header("Refrence Objects")]
+    public GameObject TUT_DoorButton;
+    public GameObject GameManager;
+    private Animator PoleAnimator;
+
+    [Header("Settings")]
     public int value = 0;
-    void Update()
+    public float turnDuration = 0.5f;
+    bool isTurning = false;
+
+    private void Start()
     {
-        timer -= Time.deltaTime;
+        PoleAnimator = TUT_DoorButton.GetComponent<Animator>();
     }
+
     public void Interact()
     {
-        if(timer <= 0)
+        if (!isTurning)
+            StartCoroutine(SmoothTurn());
+    }
+
+    IEnumerator SmoothTurn()
+    {
+        isTurning = true;
+
+        Quaternion start = transform.rotation;
+        Quaternion end = start * Quaternion.Euler(0, -90, 0);
+
+        float t = 0;
+        while (t < turnDuration)
         {
-            transform.Rotate(0, -90, 0);
-            value = (value + 1) % 4;
-            timer = 1f;
+            transform.rotation = Quaternion.Slerp(start, end, t / turnDuration);
+            t += Time.deltaTime;
+            yield return null;
         }
+
+        transform.rotation = end;
+        value = (value + 1) % 4;
+        isTurning = false;
+        GameManager.GetComponent<TutorialMovementReader>().InteractWithButton();
+        PoleAnimator.SetTrigger("Active");
     }
 }
+
