@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa83b705a54b4e745b529db51fa1de11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 456924928}
 --- !u!95 &300096878
 Animator:
   serializedVersion: 7
@@ -497,11 +497,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!198 &444090412 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8436439230295724821, guid: d950b38fbae5bda438be51f922369002, type: 3}
-  m_PrefabInstance: {fileID: 872131591}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456924928
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1d68f42d60b2e4492e1c0a6bc8755b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialMovementReader
-  CharacterController: {fileID: 872131592}
+  CharacterController: {fileID: 0}
   ReadMoveDirection: {x: 0, y: 0}
   Door1: {fileID: 1105352266}
   Door2: {fileID: 1148381970}
@@ -546,7 +541,7 @@ Transform:
   m_GameObject: {fileID: 456924928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 73, y: 0, z: -18.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -587,11 +582,11 @@ PrefabInstance:
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Leaves
       value: 
-      objectReference: {fileID: 444090412}
+      objectReference: {fileID: 0}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
-      objectReference: {fileID: 1371715162}
+      objectReference: {fileID: 0}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: MusicFade
       value: 
@@ -667,11 +662,11 @@ PrefabInstance:
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Leaves
       value: 
-      objectReference: {fileID: 444090412}
+      objectReference: {fileID: 0}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
-      objectReference: {fileID: 1371715162}
+      objectReference: {fileID: 0}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: MusicFade
       value: 
@@ -695,11 +690,11 @@ PrefabInstance:
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Leaves
       value: 
-      objectReference: {fileID: 444090412}
+      objectReference: {fileID: 0}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
-      objectReference: {fileID: 1371715162}
+      objectReference: {fileID: 0}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: MusicFade
       value: 
@@ -793,6 +788,8 @@ MonoBehaviour:
   Moon: {fileID: 97342945}
   Backgroundmusic2: {fileID: 550120487}
   Backgroundmusic3: {fileID: 550120486}
+  Fireflies: {fileID: 0}
+  Leaves: {fileID: 0}
   MusicFade: {fileID: 550120485}
 --- !u!1001 &711194120
 PrefabInstance:
@@ -945,11 +942,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d950b38fbae5bda438be51f922369002, type: 3}
---- !u!1 &872131592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4475170911575805946, guid: d950b38fbae5bda438be51f922369002, type: 3}
-  m_PrefabInstance: {fileID: 872131591}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1105352266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,11 +1242,6 @@ MonoBehaviour:
   rotationSpeed: 0.3
   soundClipOpen: {fileID: 0}
   soundClipClose: {fileID: 0}
---- !u!198 &1371715162 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3642618904637383977, guid: d950b38fbae5bda438be51f922369002, type: 3}
-  m_PrefabInstance: {fileID: 872131591}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1374192948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1304,11 +1291,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 436446, guid: ef46c623d3349ef43a87cd771458d011, type: 3}
   m_PrefabInstance: {fileID: 1374192948}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1465716896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3710365034372977067, guid: d950b38fbae5bda438be51f922369002, type: 3}
-  m_PrefabInstance: {fileID: 872131591}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1584809331
 PrefabInstance:
@@ -1496,7 +1478,7 @@ PrefabInstance:
     - target: {fileID: 735539489566439562, guid: 59edfbfdbfc26c6499e9eafbd305b8be, type: 3}
       propertyPath: goFollow
       value: 
-      objectReference: {fileID: 1465716896}
+      objectReference: {fileID: 0}
     - target: {fileID: 2353775110848200724, guid: 59edfbfdbfc26c6499e9eafbd305b8be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 120.26674

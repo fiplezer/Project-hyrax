@@ -7,6 +7,7 @@ public class TutorialMovementReader : MonoBehaviour
 {
     public GameObject CharacterController;
     public Vector2 ReadMoveDirection;
+    public UITextChanges UITextChanges;
     public GameObject Door1;
     public GameObject Door2;
     public float IsSprinting;

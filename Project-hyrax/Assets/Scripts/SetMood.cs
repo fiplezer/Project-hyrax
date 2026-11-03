@@ -32,9 +32,7 @@ public class SetMood : MonoBehaviour
     {
         Fireflies.Play();
         Leaves.Stop();
-        Debug.Log("blaad");
         UiTextChanges.WaterEnterText();
-        Debug.Log("water");
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
         audioSource.PlayOneShot(FlashlightClick);
