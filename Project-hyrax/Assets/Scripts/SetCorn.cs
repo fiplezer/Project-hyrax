@@ -12,6 +12,7 @@ public class SetCorn : MonoBehaviour
     public GameObject Backgroundmusic3;
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
+    public GameObject Player;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -31,5 +32,7 @@ public class SetCorn : MonoBehaviour
         MusicFade.ToggleMusic();
         MoodCollider.enabled = true;
         CornCollider.enabled = false;
+        Player.GetComponent<FootstepAudio>().enabled = true;
+        Player.GetComponent<FootstepAudioStone>().enabled = false;
     }
 }

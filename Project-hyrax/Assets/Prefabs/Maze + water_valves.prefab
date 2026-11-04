@@ -3534,8 +3534,41 @@ PrefabInstance:
     - {fileID: 4619673948127810529, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 94209819089731612, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2556147808778280855}
   m_SourcePrefab: {fileID: 100100000, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+--- !u!1 &4957047785925536393 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 94209819089731612, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+  m_PrefabInstance: {fileID: 5009212138091768469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2556147808778280855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957047785925536393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df88f26fa06eb4aa4998d003327352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetCorn
+  Mood: {fileID: 5283177237877371239}
+  WaterObject: {fileID: 2045292912373159058}
+  Moon: {fileID: 0}
+  Backgroundmusic2: {fileID: 5671123513526570314}
+  Backgroundmusic3: {fileID: 7113725462687411746}
+  Fireflies: {fileID: 0}
+  Leaves: {fileID: 0}
+  MusicFade: {fileID: 674042425290116318}
+--- !u!1 &5283177237877371239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 924880948763614194, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
+  m_PrefabInstance: {fileID: 5009212138091768469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8941452770512157284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4148413449346994417, guid: 9fc652100c3cce047bbb4a167d57b48b, type: 3}
