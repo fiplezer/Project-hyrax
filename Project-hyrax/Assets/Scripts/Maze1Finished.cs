@@ -32,7 +32,7 @@ public class Maze1Finished : MonoBehaviour
         statue3Value = sheep3.value;
         statue4Value = sheep4.value;
 
-        if (statue1Value == 2f && statue2Value == 0f && statue3Value == 1f && statue4Value == 3f == Once == true)
+        if (statue1Value == 2f && statue2Value == 0f && statue3Value == 1f && statue4Value == 3f && Once == true)
         {
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();

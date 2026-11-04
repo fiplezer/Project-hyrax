@@ -59,6 +59,7 @@ public class TutorialMovementReader : MonoBehaviour
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();
             Once = false;
+            UITextChanges.OnTutorialComplete();
         } 
     }
 
@@ -66,7 +67,6 @@ public class TutorialMovementReader : MonoBehaviour
     {
         Interacted = true;
         UITextChanges.OnObjective03Complete();
-        UITextChanges.OnTutorialComplete();
     }
 
     IEnumerator ActivateMovement()
