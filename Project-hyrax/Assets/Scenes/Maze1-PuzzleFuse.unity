@@ -993,10 +993,18 @@ PrefabInstance:
       propertyPath: FadeDuration
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1002276713704166368, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     - target: {fileID: 1190003295715136887, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 456924928}
+    - target: {fileID: 1234604925517681199, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     - target: {fileID: 1955855257871570964, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: m_Name
       value: Valve3
@@ -1073,6 +1081,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 75ca8204e2d9a884b8b82a44a0a5f4d7, type: 2}
+    - target: {fileID: 4841209717062813357, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     - target: {fileID: 5182588715064577298, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1161,6 +1173,10 @@ PrefabInstance:
       propertyPath: Backgroundmusic2
       value: 
       objectReference: {fileID: 550120487}
+    - target: {fileID: 8257587608074800042, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
