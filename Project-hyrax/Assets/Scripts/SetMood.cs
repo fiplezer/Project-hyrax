@@ -36,7 +36,6 @@ public class SetMood : MonoBehaviour
         UiTextChanges.WaterEnterText();
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
-        audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Activate();
         Moon.gameObject.SetActive(true);
         MusicFade.ToggleMusic();
@@ -44,5 +43,10 @@ public class SetMood : MonoBehaviour
         MoodCollider.enabled = false;
         Player.GetComponent<FootstepAudio>().enabled = false;
         Player.GetComponent<FootstepAudioStone>().enabled = true;
+
+        if(FlashlightClick != null)
+        {
+            audioSource.PlayOneShot(FlashlightClick);
+        }
     }
 }
