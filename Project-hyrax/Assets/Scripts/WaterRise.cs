@@ -7,6 +7,12 @@ public class WaterRise : MonoBehaviour
     public bool Rise = false;
     public bool Lower = false;
     public bool HasStarted = false;
+    [HideInInspector] public Vector3 startPosition;
+
+    private void Start()
+    {
+        startPosition = GetComponent<Transform>().position;
+    }
 
     public void Activate()
     {

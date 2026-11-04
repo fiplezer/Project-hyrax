@@ -7,7 +7,6 @@ public class Gnome : MonoBehaviour
     [SerializeField] LayerMask ignoreOnCheck;
 
     NavMeshAgent agent;
-    Transform player;
     Camera playerCamera;
 
     public float range = 10.0f;
@@ -21,7 +20,6 @@ public class Gnome : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Player Fused").transform;
         playerCamera = Camera.main;
     }
 
