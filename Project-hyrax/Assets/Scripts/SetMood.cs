@@ -13,6 +13,7 @@ public class SetMood : MonoBehaviour
     public GameObject Moon;
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
+    public GameObject Player;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -32,16 +33,19 @@ public class SetMood : MonoBehaviour
     {
         Fireflies.Play();
         Leaves.Stop();
-        Debug.Log("blaad");
-        UiTextChanges.WaterEnterText();
-        Debug.Log("water");
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
-        audioSource.PlayOneShot(FlashlightClick);
         WaterObject.GetComponent<WaterRise>().Activate();
         Moon.gameObject.SetActive(true);
         MusicFade.ToggleMusic();
         DarkCollider.enabled = true;
         MoodCollider.enabled = false;
+        Player.GetComponent<FootstepAudio>().enabled = false;
+        Player.GetComponent<FootstepAudioStone>().enabled = true;
+
+        if(FlashlightClick != null)
+        {
+            audioSource.PlayOneShot(FlashlightClick);
+        }
     }
 }
