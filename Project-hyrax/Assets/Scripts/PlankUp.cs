@@ -24,7 +24,7 @@ public class PlankUp : MonoBehaviour
 
         Turned1 = valve1.Turned;
         Turned2 = valve2.Turned;
-        Turned3 = valve3.Turned;
+        Turned3 = valve3.Turned;    
         Turned4 = valve4.Turned;
 
         if(Turned1 == true && Turned2 == true && Turned3 == true && Turned4 == true)
