@@ -9,6 +9,7 @@ public class Jumpscare : MonoBehaviour
     private float jumpScareTimer;
     [SerializeField] private float jumpScareTime = 1f;
     [SerializeField] private AudioSource JumpscareSound;
+    [SerializeField] private AudioSource HitSound;
 
     GameObject player;
     GameObject deathHandler;
@@ -43,6 +44,7 @@ public class Jumpscare : MonoBehaviour
             currentLives = deathHandler.GetComponent<DeathHandler>().currentLives;
             if (currentLives > 0)
             {
+                HitSound.Play();
                 --currentLives;
                 deathHandler.GetComponent<DeathHandler>().currentLives = currentLives;
                 Hearts[currentLives].SetActive(false);
