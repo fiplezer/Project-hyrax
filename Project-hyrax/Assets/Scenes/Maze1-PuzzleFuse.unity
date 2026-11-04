@@ -1002,6 +1002,10 @@ PrefabInstance:
       value: Valve3
       objectReference: {fileID: 0}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Corn
+      value: 
+      objectReference: {fileID: 550120489}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
       objectReference: {fileID: 97342945}
@@ -1026,6 +1030,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1805826240}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: UiTextChanges
+      value: 
+      objectReference: {fileID: 1447144201}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Backgroundmusic1
       value: 
       objectReference: {fileID: 550120491}
@@ -1041,6 +1049,18 @@ PrefabInstance:
       propertyPath: Moon
       value: 
       objectReference: {fileID: 97342945}
+    - target: {fileID: 2556147808778280855, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Leaves
+      value: 
+      objectReference: {fileID: 1540977073}
+    - target: {fileID: 2556147808778280855, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2074933137}
+    - target: {fileID: 2556147808778280855, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Fireflies
+      value: 
+      objectReference: {fileID: 78790294}
     - target: {fileID: 3559103661943212065, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.505
@@ -1098,17 +1118,29 @@ PrefabInstance:
       value: Maze + water/valves
       objectReference: {fileID: 0}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Corn
+      value: 
+      objectReference: {fileID: 550120489}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Dark
+      value: 
+      objectReference: {fileID: 550120489}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Moon
       value: 
       objectReference: {fileID: 97342945}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Leaves
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1540977073}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2074933137}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 78790294}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: MusicFade
       value: 
@@ -1117,6 +1149,10 @@ PrefabInstance:
       propertyPath: Flashlight
       value: 
       objectReference: {fileID: 1805826240}
+    - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: FlashlightClick
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8043340563309626818, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Backgroundmusic1
       value: 
@@ -1176,6 +1212,11 @@ MonoBehaviour:
 --- !u!1 &550120487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5671123513526570314, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+  m_PrefabInstance: {fileID: 550120483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &550120489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4957047785925536393, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
   m_PrefabInstance: {fileID: 550120483}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &550120490 stripped
@@ -1936,7 +1977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.13
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1944,7 +1985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -20.96
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalRotation.w

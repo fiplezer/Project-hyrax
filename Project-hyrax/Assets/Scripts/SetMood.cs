@@ -33,7 +33,6 @@ public class SetMood : MonoBehaviour
     {
         Fireflies.Play();
         Leaves.Stop();
-        UiTextChanges.WaterEnterText();
         RenderSettings.ambientIntensity = 0.5f;
         Flashlight.SetActive(false);
         WaterObject.GetComponent<WaterRise>().Activate();
