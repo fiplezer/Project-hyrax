@@ -7,6 +7,7 @@ TagManager:
   - End
   - DeathHandler
   - Water
+  - Weeping
   layers:
   - Default
   - TransparentFX

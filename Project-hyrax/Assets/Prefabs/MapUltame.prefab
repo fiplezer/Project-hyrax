@@ -480,6 +480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7257873171515292816}
     m_Modifications:
+    - target: {fileID: 112772250341656889, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 992862545003095537, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
       propertyPath: Leaves
       value: 
@@ -500,6 +504,10 @@ PrefabInstance:
       propertyPath: Fireflies
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1576058992170836015, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: WaterObject
+      value: 
+      objectReference: {fileID: 7229312318497383556}
     - target: {fileID: 1852345057834729474, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
       propertyPath: m_Name
       value: Maze
@@ -507,6 +515,30 @@ PrefabInstance:
     - target: {fileID: 1875488203777124618, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
       propertyPath: m_TagString
       value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Size.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Size.z
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Center.y
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304202343503921086, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2710115802825457851, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -534,6 +566,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380067851151711663, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
       propertyPath: Fireflies
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380067851151711663, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: WaterObject
+      value: 
+      objectReference: {fileID: 7229312318497383556}
+    - target: {fileID: 4380067851151711663, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+      propertyPath: FlashlightClick
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4550978097865855989, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
@@ -634,7 +674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120c87785cc955e40967285f8c12e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
-  RespawnPoint: {fileID: 0}
 --- !u!4 &6551430087758462536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4550978097865855989, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
@@ -657,6 +696,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbbd83c69f75874f84d792a3d7a630c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Die
+--- !u!1 &7229312318497383556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 112772250341656889, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
+  m_PrefabInstance: {fileID: 7332713980919983549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8151372800257854772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1503207064365703305, guid: 083193cd735a5414a8a75f72d2aa41d6, type: 3}
@@ -748,7 +792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120c87785cc955e40967285f8c12e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpoint
-  RespawnPoint: {fileID: 0}
 --- !u!1001 &7821355828203017760
 PrefabInstance:
   m_ObjectHideFlags: 0
