@@ -12,6 +12,7 @@ public class SetDark : MonoBehaviour
     public GameObject Moon;
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
+    public GameObject Player;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -37,5 +38,7 @@ public class SetDark : MonoBehaviour
         MusicFade.ToggleMusic();
         MoodCollider.enabled = true; //moet mogelijk onderaan is dingen niet switchen - Zoe
         DarkCollider.enabled = false;
+        Player.GetComponent<FootstepAudio>().enabled = true;
+        Player.GetComponent<FootstepAudioStone>().enabled = false;
     }
 }

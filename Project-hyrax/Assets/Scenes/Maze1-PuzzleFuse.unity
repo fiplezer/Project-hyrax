@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 10a8b62ff2cc9644b87b750c99372c0f, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -965,24 +965,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3417679797089572987, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
   m_PrefabInstance: {fileID: 6772692014659385204}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &456924929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456924928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268294c2139ad194094f19092d576838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Maze1Finished
-  Sheep1: {fileID: 462931581350953809}
-  Sheep2: {fileID: 6002757648202082583}
-  Sheep3: {fileID: 6002757647371286157}
-  Sheep4: {fileID: 6002757646509507817}
-  Door1: {fileID: 3055794}
-  Door2: {fileID: 863589890}
 --- !u!1001 &550120483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,11 +1008,15 @@ PrefabInstance:
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Leaves
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1540977073}
+    - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2074933137}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 78790294}
     - target: {fileID: 2057630649047119958, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: MusicFade
       value: 
@@ -1051,6 +1037,10 @@ PrefabInstance:
       propertyPath: FadeDuration
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2556147808778280855, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Moon
+      value: 
+      objectReference: {fileID: 97342945}
     - target: {fileID: 3559103661943212065, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.505
@@ -1144,6 +1134,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1540977073}
     - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2074933137}
+    - target: {fileID: 8541543507115328736, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
       propertyPath: Fireflies
       value: 
       objectReference: {fileID: 78790294}
@@ -1166,16 +1160,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4957047785925536393, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 550120492}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
---- !u!1 &550120484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5283177237877371239, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
-  m_PrefabInstance: {fileID: 550120483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &550120485 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 674042425290116318, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
@@ -1187,24 +1173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733889565e014084e926f2031a4f4c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicFade
---- !u!1 &550120486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7113725462687411746, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
-  m_PrefabInstance: {fileID: 550120483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &550120487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5671123513526570314, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
-  m_PrefabInstance: {fileID: 550120483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &550120488 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2045292912373159058, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
-  m_PrefabInstance: {fileID: 550120483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &550120489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4957047785925536393, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
   m_PrefabInstance: {fileID: 550120483}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &550120490 stripped
@@ -1223,26 +1194,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8788605263698949640, guid: bd8739db29c4d9a4f80cdd82e2891d84, type: 3}
   m_PrefabInstance: {fileID: 550120483}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &550120492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550120489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39df88f26fa06eb4aa4998d003327352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SetCorn
-  Mood: {fileID: 550120484}
-  WaterObject: {fileID: 550120488}
-  Moon: {fileID: 97342945}
-  Backgroundmusic2: {fileID: 550120487}
-  Backgroundmusic3: {fileID: 550120486}
-  Fireflies: {fileID: 0}
-  Leaves: {fileID: 0}
-  MusicFade: {fileID: 550120485}
 --- !u!1 &774401731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,6 +1914,22 @@ PrefabInstance:
       propertyPath: StaminaBar
       value: 
       objectReference: {fileID: 991391252}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 565fa0b67832294459bbc70016900131, type: 3}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c4f97b3378de0f44fa53945f209948b7, type: 3}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d8dca848a34de7744ac6801d2e57967c, type: 3}
     - target: {fileID: 6249916538651836053, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_Name
       value: Player Fused
@@ -2562,6 +2529,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Door1
+      value: 
+      objectReference: {fileID: 3055794}
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Door2
+      value: 
+      objectReference: {fileID: 863589890}
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Sheep1
+      value: 
+      objectReference: {fileID: 462931581350953809}
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Sheep2
+      value: 
+      objectReference: {fileID: 6002757648202082583}
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Sheep3
+      value: 
+      objectReference: {fileID: 6002757647371286157}
+    - target: {fileID: 763512921476614992, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
+      propertyPath: Sheep4
+      value: 
+      objectReference: {fileID: 6002757646509507817}
     - target: {fileID: 3417679797089572987, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -2625,10 +2616,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3417679797089572987, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 456924929}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d9f2333b25fe3419811235dbdd553c, type: 3}
 --- !u!1001 &7152574657169519227
 PrefabInstance:

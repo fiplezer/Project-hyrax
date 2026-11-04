@@ -13,6 +13,7 @@ public class SetMood : MonoBehaviour
     public GameObject Moon;
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
+    public GameObject Player;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -41,5 +42,7 @@ public class SetMood : MonoBehaviour
         MusicFade.ToggleMusic();
         DarkCollider.enabled = true;
         MoodCollider.enabled = false;
+        Player.GetComponent<FootstepAudio>().enabled = false;
+        Player.GetComponent<FootstepAudioStone>().enabled = true;
     }
 }
