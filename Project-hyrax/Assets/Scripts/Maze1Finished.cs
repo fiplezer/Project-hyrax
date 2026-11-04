@@ -6,10 +6,10 @@ using UnityEngine.Audio;
 public class Maze1Finished : MonoBehaviour
 {
     [Header("Components")]
-    public GameObject Statue1;
-    public GameObject Statue2;
-    public GameObject Statue3;
-    public GameObject Statue4;
+    public GameObject Sheep1;
+    public GameObject Sheep2;
+    public GameObject Sheep3;
+    public GameObject Sheep4;
     public GameObject Door1;
     public GameObject Door2;
 
@@ -22,15 +22,15 @@ public class Maze1Finished : MonoBehaviour
 
     public void Update()
     {
-        Temp_Turning_script statue1 = Statue1.GetComponent<Temp_Turning_script>();
-        Temp_Turning_script statue2 = Statue2.GetComponent<Temp_Turning_script>();
-        Temp_Turning_script statue3 = Statue3.GetComponent<Temp_Turning_script>();
-        Temp_Turning_script statue4 = Statue4.GetComponent<Temp_Turning_script>();
+        Maze1_Turning_script sheep1 = Sheep1.GetComponent<Maze1_Turning_script>();
+        Maze1_Turning_script sheep2 = Sheep2.GetComponent<Maze1_Turning_script>();
+        Maze1_Turning_script sheep3 = Sheep3.GetComponent<Maze1_Turning_script>();
+        Maze1_Turning_script sheep4 = Sheep4.GetComponent<Maze1_Turning_script>();
 
-        statue1Value = statue1.value;
-        statue2Value = statue2.value;
-        statue3Value = statue3.value;
-        statue4Value = statue4.value;
+        statue1Value = sheep1.value;
+        statue2Value = sheep2.value;
+        statue3Value = sheep3.value;
+        statue4Value = sheep4.value;
 
         if (statue1Value == 2f && statue2Value == 0f && statue3Value == 1f && statue4Value == 3f == Once == true)
         {
