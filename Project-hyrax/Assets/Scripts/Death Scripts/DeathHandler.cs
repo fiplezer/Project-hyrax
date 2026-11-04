@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class DeathHandler : MonoBehaviour
 {
     [SerializeField] private int totalLives;
-    [SerializeField] private int currentLives;
+    public int currentLives;
 
     public Checkpoint CurrentCheckPoint;
     private GameObject water;
+
+    public GameObject[] Hearts;
 
     private void Start()
     {
@@ -26,10 +28,9 @@ public class DeathHandler : MonoBehaviour
             //reset water to start position
 
             water.transform.position = water.GetComponent<WaterRise>().startPosition;
-
-
-
             --currentLives;
+
+            Hearts[currentLives].SetActive(false);
         }
         else if (currentLives <= 0)
         {

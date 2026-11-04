@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Jumpscare : MonoBehaviour
@@ -6,9 +8,21 @@ public class Jumpscare : MonoBehaviour
     [SerializeField] private GameObject jumpScareImage;
     private float jumpScareTimer;
     [SerializeField] private float jumpScareTime = 1f;
+    [SerializeField] private AudioSource JumpscareSound;
+
+    GameObject player;
+    GameObject deathHandler;
+    int currentLives;
+    GameObject[] Hearts;
+
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        deathHandler = GameObject.FindGameObjectWithTag("DeathHandler");
+        Hearts = deathHandler.GetComponent<DeathHandler>().Hearts;
+
+
         if (jumpScareImage)
         {
             jumpScareImage.SetActive(false);
@@ -18,19 +32,42 @@ public class Jumpscare : MonoBehaviour
     private void OnTriggerStay(Collider col)
     {
         jumpScareTimer += Time.deltaTime;
-        Debug.Log(jumpScareTimer);
+
         if (jumpScareTimer > jumpScareTime)
         {
-            jumpScareImage.SetActive(true);
-            //deactivate player movement
-            //activate jumpscare
             //play jumpscare sound
             //kill player
+
+            //check deathhandler for current lives,
+
+            currentLives = deathHandler.GetComponent<DeathHandler>().currentLives;
+            if (currentLives > 0)
+            {
+                --currentLives;
+                deathHandler.GetComponent<DeathHandler>().currentLives = currentLives;
+                Hearts[currentLives].SetActive(false);
+            }
+            else if (currentLives <= 0)
+            {
+                //jumpscare, wait, reset
+                player.GetComponent<CharacterController>().enabled = false;
+                jumpScareImage.SetActive(true);
+                JumpscareSound.Play();
+                StartCoroutine(WaitForSeconds(2f));
+            }
+            jumpScareTimer = 0;
         }
     }
 
     private void OnTriggerExit(Collider col)
     {
         jumpScareTimer = 0;
+    }
+
+    IEnumerator WaitForSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }
