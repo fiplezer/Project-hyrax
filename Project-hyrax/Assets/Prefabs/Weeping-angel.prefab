@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 634125741016393330}
   m_Layer: 0
   m_Name: Weeping-angel
-  m_TagString: Untagged
+  m_TagString: Weeping
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
