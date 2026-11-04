@@ -460,6 +460,7 @@ MonoBehaviour:
   Sheep4: {fileID: 1148448492}
   Door1: {fileID: 768367612}
   Door2: {fileID: 768367611}
+  UITextChanges: {fileID: 1617067182}
 --- !u!1 &208382138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6245595338808555485, guid: d2365878ec8e66b4b953ac698c8e3643, type: 3}
@@ -1216,6 +1217,34 @@ PrefabInstance:
     - target: {fileID: 4536483911934707629, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.12613
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.873398
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.016951915
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99985635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669799222245173339, guid: 62603f81653f4f741b3146b9c29656cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 181.943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3263,6 +3292,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1854573750}
     - target: {fileID: 145196035482465530, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1717049764}
+    - target: {fileID: 145196035482465530, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: Fireflies
       value: 
       objectReference: {fileID: 1206003990}
@@ -3282,6 +3315,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.51
       objectReference: {fileID: 0}
+    - target: {fileID: 2791510105737541867, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
+    - target: {fileID: 3217138477151543016, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
+    - target: {fileID: 3384101328895216994, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     - target: {fileID: 3882807565160684548, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.02
@@ -3306,6 +3351,10 @@ PrefabInstance:
       propertyPath: Leaves
       value: 
       objectReference: {fileID: 1854573750}
+    - target: {fileID: 6415984611960500242, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1717049764}
     - target: {fileID: 6415984611960500242, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: Fireflies
       value: 
@@ -3371,6 +3420,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1854573750}
     - target: {fileID: 7495207740360722508, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1717049764}
+    - target: {fileID: 7495207740360722508, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: Fireflies
       value: 
       objectReference: {fileID: 1206003990}
@@ -3391,9 +3444,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1854573750}
     - target: {fileID: 8078404186714246546, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1717049764}
+    - target: {fileID: 8078404186714246546, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: Fireflies
       value: 
       objectReference: {fileID: 1206003990}
+    - target: {fileID: 8238478283895219943, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: ValveAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

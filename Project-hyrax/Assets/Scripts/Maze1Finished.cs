@@ -12,6 +12,7 @@ public class Maze1Finished : MonoBehaviour
     public GameObject Sheep4;
     public GameObject Door1;
     public GameObject Door2;
+    public UITextChanges UITextChanges;
 
     int statue1Value;
     int statue2Value;
@@ -37,6 +38,7 @@ public class Maze1Finished : MonoBehaviour
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();
             Once = false;
+            UITextChanges.OnMazeOneCompleted();
         }
     }
 }
