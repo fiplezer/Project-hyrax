@@ -45,9 +45,14 @@ public class TutorialMovementReader : MonoBehaviour
         {
             Right = true;
         }
+        if (Forward == true & Backward == true & Left == true & Right == true)
+        {
+            UITextChanges.OnObjective01Complete();
+        }
         if (IsSprinting == (1))
         {
             Sprint = true;
+            UITextChanges.OnObjective02Complete();
         }
         if (Forward == true && Backward == true && Left == true && Right == true && Sprint == true && Interacted == true && Once == true)
         {
@@ -60,6 +65,8 @@ public class TutorialMovementReader : MonoBehaviour
     public void InteractWithButton()
     {
         Interacted = true;
+        UITextChanges.OnObjective03Complete();
+        UITextChanges.OnTutorialComplete();
     }
 
     IEnumerator ActivateMovement()
