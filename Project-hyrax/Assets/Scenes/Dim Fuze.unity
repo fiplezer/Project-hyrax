@@ -1966,6 +1966,14 @@ PrefabInstance:
       propertyPath: jumpScareImage
       value: 
       objectReference: {fileID: 181749165}
+    - target: {fileID: 9000990262651087473, guid: ed1bd4185f26f9343813a4efafd35caf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000990262651087473, guid: ed1bd4185f26f9343813a4efafd35caf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
