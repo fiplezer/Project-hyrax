@@ -33,6 +33,7 @@ public class SetMood : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Fireflies.gameObject.SetActive(true);
         Fireflies.Play();
         Leaves.Stop();
         RenderSettings.ambientIntensity = 0.5f;

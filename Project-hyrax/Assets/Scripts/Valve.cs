@@ -9,10 +9,13 @@ public class Valve : MonoBehaviour, IInteractable
     private bool Turnable = true;
     public GameObject WaterObject;
     public bool Turned = false;
+    private AudioSource AudioSource;
+    public AudioClip ValveAudio;
 
     void Start()
     {
         targetRotation = transform.rotation;
+        AudioSource = GetComponent<AudioSource>();
     }
 
     public void Interact()
@@ -20,6 +23,7 @@ public class Valve : MonoBehaviour, IInteractable
         if (Turnable == true)
         {
             targetRotation *= Quaternion.Euler(0, 180, 0);
+            AudioSource.PlayOneShot(ValveAudio);
             StartCoroutine(waitThreeSeconds());
             Turnable = false;
             WaterObject.GetComponent<WaterRise>().ActivateLower();

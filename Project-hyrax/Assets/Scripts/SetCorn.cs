@@ -26,8 +26,9 @@ public class SetCorn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Fireflies.Play();
-        Leaves.Stop();
+        Fireflies.gameObject.SetActive(false);
+        Fireflies.Stop();
+        Leaves.Play();
         WaterObject.GetComponent<WaterRise>().Deactivate();
         Backgroundmusic2.gameObject.SetActive(true);
         Backgroundmusic3.gameObject.SetActive(false);

@@ -45,26 +45,33 @@ public class TutorialMovementReader : MonoBehaviour
         {
             Right = true;
         }
+        if (Forward == true & Backward == true & Left == true & Right == true)
+        {
+            UITextChanges.OnObjective01Complete();
+        }
         if (IsSprinting == (1))
         {
             Sprint = true;
+            UITextChanges.OnObjective02Complete();
         }
         if (Forward == true && Backward == true && Left == true && Right == true && Sprint == true && Interacted == true && Once == true)
         {
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();
             Once = false;
+            UITextChanges.OnTutorialComplete();
         } 
     }
 
     public void InteractWithButton()
     {
         Interacted = true;
+        UITextChanges.OnObjective03Complete();
     }
 
     IEnumerator ActivateMovement()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         CharacterController.GetComponent<Player_Controller>().enabled = true;
     }

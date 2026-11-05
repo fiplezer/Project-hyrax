@@ -28,6 +28,7 @@ public class SetDark : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Fireflies.gameObject.SetActive(false);
         Fireflies.Stop();
         Leaves.Play();
         RenderSettings.ambientIntensity = 0.0f;
