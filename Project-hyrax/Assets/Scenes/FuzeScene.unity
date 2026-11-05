@@ -778,6 +778,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3733969456894689110, guid: 5ed6cb97a8878564c99422206278dd9f, type: 3}
   m_PrefabInstance: {fileID: 836493403}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &853195678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7229312318497383556, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+  m_PrefabInstance: {fileID: 5328691511715300601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &918695498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9105872560976064217, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
@@ -914,12 +919,24 @@ PrefabInstance:
       objectReference: {fileID: 918695498}
     - target: {fileID: 811634453966490618, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 924967461723931834, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 1500
       objectReference: {fileID: 0}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 565fa0b67832294459bbc70016900131, type: 3}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c4f97b3378de0f44fa53945f209948b7, type: 3}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: 'footstepSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d8dca848a34de7744ac6801d2e57967c, type: 3}
     - target: {fileID: 3781321201071885613, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6208,6 +6225,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -10.38
       objectReference: {fileID: 0}
+    - target: {fileID: 5768171486683765811, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5963293881560468988, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.46
@@ -6360,6 +6381,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 9000990261547050962}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4635732771383266378, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5328691511715300606}
+    - targetCorrespondingSourceObject: {fileID: 4635732771383266378, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5328691511715300611}
     - targetCorrespondingSourceObject: {fileID: 1972725030480022776, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1133259018}
@@ -6388,6 +6415,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1942201739046931651, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
   m_PrefabInstance: {fileID: 5328691511715300601}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5328691511715300605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4635732771383266378, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+  m_PrefabInstance: {fileID: 5328691511715300601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5328691511715300606
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328691511715300605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2d3719b0ed672b4989b4ae4acdc17f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5328691511715300611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328691511715300605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063e02862ca4cb5408c3df145825c29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlankUp
+  plankAnimator: {fileID: 5328691511715300606}
+  WaterObject: {fileID: 853195678}
+  Valve1: {fileID: 1133259012}
+  Valve2: {fileID: 1591149211}
+  Valve3: {fileID: 481905850}
+  Valve4: {fileID: 1931377415}
 --- !u!4 &5343803304509084331
 Transform:
   m_ObjectHideFlags: 0
@@ -8771,7 +8843,7 @@ Transform:
   m_GameObject: {fileID: 8958152891633015917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.927, y: -0.6666667, z: 19.329}
+  m_LocalPosition: {x: -20.001, y: -0.6666667, z: 1.879}
   m_LocalScale: {x: 0.11111111, y: 0.33333334, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
