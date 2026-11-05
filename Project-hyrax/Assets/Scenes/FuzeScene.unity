@@ -919,11 +919,15 @@ PrefabInstance:
       objectReference: {fileID: 918695498}
     - target: {fileID: 811634453966490618, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 924967461723931834, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1424498677333408402, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: 'footstepSounds.Array.data[0]'
@@ -5953,7 +5957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6953898717254744751, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7326130166102076912, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
       propertyPath: m_AnchorMax.x

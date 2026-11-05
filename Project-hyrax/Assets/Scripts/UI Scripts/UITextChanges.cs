@@ -58,19 +58,21 @@ public class UITextChanges : MonoBehaviour
         if (TutorialObjectiveCompleted)
         {
             FIObjective01.gameObject.SetActive(false);
-            IObjective01.gameObject.SetActive(true);
             FIObjective02.gameObject.SetActive(false);
             FIObjective03.gameObject.SetActive(false);
             TObjective02.gameObject.SetActive(false);
             TObjective03.gameObject.SetActive(false);
             TutorialText.SetText("Escape the maze");
             TObjective01.SetText("- Turn the four pillars");
+            IObjective01.gameObject.SetActive(true);
+            IObjective01.enabled = true;
         }
     }
 
     public void OnMazeOneCompleted()
     {
         FIObjective01.gameObject.SetActive(true);
+        FIObjective01.enabled = true;
         IObjective01.gameObject.SetActive(false);
         TutorialText.SetText("The second gate has opened");
     }
