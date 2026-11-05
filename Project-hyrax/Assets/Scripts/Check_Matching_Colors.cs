@@ -17,7 +17,6 @@ public class Check_Matching_Colors : MonoBehaviour, IInteractable
     private void Awake()
     {
         End = GameObject.FindGameObjectWithTag("End");
-        End.SetActive(false);
         requiredPoints = PointLights.Length;
     }
 
@@ -46,8 +45,20 @@ public class Check_Matching_Colors : MonoBehaviour, IInteractable
 
             if (currentPoints >= requiredPoints)
             {
-                End.SetActive(true);
+                //set goal to end & turn off all buttons
+                Transform parent = this.gameObject.transform.parent.parent;
+
+                parent.GetComponent<LijnPuzzel>().target = End.transform;
+
+                parent.GetComponentInChildren<Generate_Line>().enabled = false;
+                parent.GetComponentInChildren<Select_Color>().enabled = false;
+                End.transform.GetChild(0).gameObject.SetActive(false);
+
                 Debug.Log("Win");
+                parent.GetComponent<LijnPuzzel>().getPath();
+                parent.GetComponent<LijnPuzzel>().line.enabled = true;
+                parent.GetComponentInChildren<Check_Matching_Colors>().enabled = false;
+                return;
             }
             ResetAll();
         }
