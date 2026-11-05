@@ -14,6 +14,7 @@ public class SetMood : MonoBehaviour
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
     public GameObject Player;
+    private GameObject WeepingAngel;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -27,6 +28,7 @@ public class SetMood : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         DarkCollider = Dark.GetComponent<Collider>();
         MoodCollider = this.GetComponent<Collider>();
+        WeepingAngel = GameObject.FindGameObjectWithTag("Weeping");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,6 +48,11 @@ public class SetMood : MonoBehaviour
         if(FlashlightClick != null)
         {
             audioSource.PlayOneShot(FlashlightClick);
+        }
+
+        if (WeepingAngel.activeInHierarchy == true)
+        {
+            WeepingAngel.SetActive(false);
         }
     }
 }

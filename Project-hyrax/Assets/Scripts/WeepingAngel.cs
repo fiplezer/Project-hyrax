@@ -13,7 +13,7 @@ public class WeepingAngel : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
         playerCamera = Camera.main;
     }

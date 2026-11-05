@@ -13,6 +13,7 @@ public class SetCorn : MonoBehaviour
     public ParticleSystem Fireflies;
     public ParticleSystem Leaves;
     public GameObject Player;
+    private GameObject WeepingAngel;
 
     [Header("Audio")]
     [SerializeField] private MusicFade MusicFade;
@@ -20,6 +21,7 @@ public class SetCorn : MonoBehaviour
     {
         MoodCollider = Mood.GetComponent<Collider>();
         CornCollider = this.GetComponent<Collider>();
+        WeepingAngel = GameObject.FindGameObjectWithTag("Weeping");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,5 +36,10 @@ public class SetCorn : MonoBehaviour
         CornCollider.enabled = false;
         Player.GetComponent<FootstepAudio>().enabled = true;
         Player.GetComponent<FootstepAudioStone>().enabled = false;
+
+        if (WeepingAngel.activeInHierarchy == false)
+        {
+            WeepingAngel.SetActive(true);
+        }
     }
 }
