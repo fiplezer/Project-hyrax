@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class LijnPuzzel : MonoBehaviour
 {
     [HideInInspector] public LineRenderer line;
-    [HideInInspector] public Transform target;
+    public Transform target;
     private Transform previousTarget;
     private NavMeshAgent agent;
     private NavMeshPath paths;
@@ -63,7 +63,7 @@ public class LijnPuzzel : MonoBehaviour
         getPath();
     }
 
-    private void getPath()
+    public void getPath()
     {
         line.SetPosition(0, transform.position);
 
