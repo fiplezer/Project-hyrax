@@ -71,7 +71,7 @@ public class TutorialMovementReader : MonoBehaviour
 
     IEnumerator ActivateMovement()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         CharacterController.GetComponent<Player_Controller>().enabled = true;
     }
