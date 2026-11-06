@@ -15,6 +15,7 @@ public class Jumpscare : MonoBehaviour
     GameObject deathHandler;
     int currentLives;
     GameObject[] Hearts;
+    public Transform angelRespawn;
 
 
     private void Start()
@@ -36,11 +37,6 @@ public class Jumpscare : MonoBehaviour
 
         if (jumpScareTimer > jumpScareTime)
         {
-            //play jumpscare sound
-            //kill player
-
-            //check deathhandler for current lives,
-
             currentLives = deathHandler.GetComponent<DeathHandler>().currentLives;
             if (currentLives > 0)
             {
@@ -51,12 +47,13 @@ public class Jumpscare : MonoBehaviour
             }
             else if (currentLives <= 0)
             {
-                //jumpscare, wait, reset
                 player.GetComponent<CharacterController>().enabled = false;
                 jumpScareImage.SetActive(true);
                 JumpscareSound.Play();
                 StartCoroutine(WaitForSeconds(2f));
             }
+            // teleport angel away
+            transform.position = angelRespawn.position;
             jumpScareTimer = 0;
         }
     }
