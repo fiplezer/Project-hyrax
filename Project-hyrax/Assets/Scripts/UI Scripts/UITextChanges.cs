@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class UITextChanges : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class UITextChanges : MonoBehaviour
     public Image FIObjective03;
 
     public bool TutorialObjectiveCompleted = false;
+    public bool Uno = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void WaterEnterText()
     {
@@ -30,16 +32,9 @@ public class UITextChanges : MonoBehaviour
     }
     public void OnObjective01Complete()
     {
-        IObjective01.enabled = false;
-        if (!TutorialObjectiveCompleted)
-        {
-            FIObjective01.gameObject.SetActive(true);
-        }
-        else
-        {
-            FIObjective01.gameObject.SetActive(false);
-            IObjective01.enabled = true;
-        }
+         IObjective01.enabled = false;
+        
+         FIObjective01.gameObject.SetActive(true);
     }
     public void OnObjective02Complete()
     {
@@ -54,26 +49,39 @@ public class UITextChanges : MonoBehaviour
     
     public void OnTutorialComplete()
     {
-        TutorialObjectiveCompleted = true;
-        if (TutorialObjectiveCompleted)
-        {
-            FIObjective01.gameObject.SetActive(false);
-            FIObjective02.gameObject.SetActive(false);
-            FIObjective03.gameObject.SetActive(false);
-            TObjective02.gameObject.SetActive(false);
-            TObjective03.gameObject.SetActive(false);
-            TutorialText.SetText("Escape the maze");
-            TObjective01.SetText("- Turn the four pillars");
-            IObjective01.gameObject.SetActive(true);
-            IObjective01.enabled = true;
-        }
+        IObjective01.gameObject.SetActive(true);
+        IObjective01.enabled = true;
+        
+        FIObjective01.enabled = false;
+        FIObjective02.enabled = false;
+        FIObjective03.enabled = false;
+        TObjective02.enabled = false;
+        TObjective03.enabled = false;
+
+        
+        TutorialText.SetText("Escape the maze, Tip : Look at the compass");
+        TObjective01.SetText("- Turn all the sheep in the right direction");
     }
 
     public void OnMazeOneCompleted()
     {
+        IObjective01.gameObject.SetActive(false);
+        IObjective01.enabled = false;
         FIObjective01.gameObject.SetActive(true);
         FIObjective01.enabled = true;
-        IObjective01.gameObject.SetActive(false);
         TutorialText.SetText("The second gate has opened");
+    }
+
+    public void OnMazeTwoEnter()
+    {
+        EnterWaterText.gameObject.SetActive(true);
+
+        TutorialText.SetText("Don't fall off");
+        FIObjective01.gameObject.SetActive(false);
+        FIObjective01.enabled = false;
+        IObjective01.enabled = true;
+        IObjective01.gameObject.SetActive(true);
+
+        TObjective01.SetText("Turn all four valves");
     }
 }

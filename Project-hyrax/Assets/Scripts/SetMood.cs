@@ -45,6 +45,7 @@ public class SetMood : MonoBehaviour
         MoodCollider.enabled = false;
         Player.GetComponent<FootstepAudio>().enabled = false;
         Player.GetComponent<FootstepAudioStone>().enabled = true;
+        UiTextChanges.OnMazeTwoEnter();
 
         if(FlashlightClick != null)
         {

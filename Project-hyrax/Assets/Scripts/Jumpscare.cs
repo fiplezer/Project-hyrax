@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -53,7 +54,7 @@ public class Jumpscare : MonoBehaviour
                 StartCoroutine(WaitForSeconds(2f));
             }
             // teleport angel away
-            transform.position = angelRespawn.position;
+            GetComponent<NavMeshAgent>().Warp(angelRespawn.position);
             jumpScareTimer = 0;
         }
     }

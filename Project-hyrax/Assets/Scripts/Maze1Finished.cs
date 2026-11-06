@@ -35,10 +35,10 @@ public class Maze1Finished : MonoBehaviour
 
         if (statue1Value == 2f && statue2Value == 0f && statue3Value == 1f && statue4Value == 3f && Once == true)
         {
+            UITextChanges.OnMazeOneCompleted();
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();
-            Once = false;
-            UITextChanges.OnMazeOneCompleted();
+            Once = false; 
         }
     }
 }

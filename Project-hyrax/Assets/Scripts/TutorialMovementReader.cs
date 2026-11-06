@@ -18,6 +18,8 @@ public class TutorialMovementReader : MonoBehaviour
     private bool Sprint = false;
     public bool Interacted = false;
     private bool Once = true;
+    private bool Once1 = true;
+    private bool Once2 = true;
 
     private void Start()
     {
@@ -45,21 +47,23 @@ public class TutorialMovementReader : MonoBehaviour
         {
             Right = true;
         }
-        if (Forward == true & Backward == true & Left == true & Right == true)
+        if (Forward == true & Backward == true & Left == true & Right == true && Once1)
         {
             UITextChanges.OnObjective01Complete();
+            Once1 = false;
         }
-        if (IsSprinting == (1))
+        if (IsSprinting == (1) && Once2)
         {
             Sprint = true;
             UITextChanges.OnObjective02Complete();
+            Once2 = false;
         }
         if (Forward == true && Backward == true && Left == true && Right == true && Sprint == true && Interacted == true && Once == true)
         {
             Door1.GetComponent<DoorController>().ToggleDoor();
             Door2.GetComponent<DoorController>().ToggleDoor();
-            Once = false;
             UITextChanges.OnTutorialComplete();
+            Once = false;
         } 
     }
 

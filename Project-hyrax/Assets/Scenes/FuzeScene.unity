@@ -5103,7 +5103,7 @@ Transform:
   m_GameObject: {fileID: 1603578853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 27.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6140,7 +6140,7 @@ Transform:
   m_GameObject: {fileID: 1910249667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -20.001, y: -0.6666667, z: 1.8790005}
+  m_LocalPosition: {x: -19.99, y: -0.6666667, z: 2.229}
   m_LocalScale: {x: 0.11111111, y: 0.33333334, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10750,6 +10750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6266714431303172718, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7326130166102076912, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10757,6 +10761,10 @@ PrefabInstance:
     - target: {fileID: 7326130166102076912, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996437118827691981, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8005308633553260301, guid: d3683bf58f6e6dd4987ec65e939588cf, type: 3}
       propertyPath: m_IsActive
@@ -11038,7 +11046,7 @@ PrefabInstance:
     - target: {fileID: 7495207740360722508, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: UiTextChanges
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5183285689659521080}
     - target: {fileID: 8078404186714246546, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: Moon
       value: 
