@@ -48,16 +48,20 @@ public class Check_Matching_Colors : MonoBehaviour, IInteractable
                 //set goal to end & turn off all buttons
                 Transform parent = this.gameObject.transform.parent.parent;
 
-                parent.GetComponent<LijnPuzzel>().target = End.transform;
-
                 parent.GetComponentInChildren<Generate_Line>().enabled = false;
                 parent.GetComponentInChildren<Select_Color>().enabled = false;
+                parent.GetComponentInChildren<Check_Matching_Colors>().enabled = false;
+
                 End.transform.GetChild(0).gameObject.SetActive(false);
 
+
+                parent.GetComponent<LijnPuzzel>().target = End.transform;
+
+                parent.GetComponent<LijnPuzzel>().CreateLine();
+
                 Debug.Log("Win");
-                parent.GetComponent<LijnPuzzel>().getPath();
-                parent.GetComponent<LijnPuzzel>().line.enabled = true;
-                parent.GetComponentInChildren<Check_Matching_Colors>().enabled = false;
+                currentTarget.GetComponent<Generate_Color>().ResetColor();
+                currentSelectedColorObject.GetComponent<Select_Color>().ResetColor();
                 return;
             }
             ResetAll();

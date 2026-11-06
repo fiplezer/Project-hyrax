@@ -987,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.y
@@ -995,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 8351722133495102453, guid: d950b38fbae5bda438be51f922369002, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6283,6 +6283,10 @@ PrefabInstance:
       propertyPath: ValveAudio
       value: 
       objectReference: {fileID: 8300000, guid: 7311208353138244b8bfc6bc3431e713, type: 3}
+    - target: {fileID: 3721791452319667722, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 75ff2727a1008f94e9c1adc113253eb9, type: 2}
     - target: {fileID: 3882807565160684548, guid: 14da6e98d549630459a599c9d24d3eab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.02
@@ -8861,7 +8865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8971746903141968541
 Transform:
   m_ObjectHideFlags: 0
